@@ -16,17 +16,17 @@
                 "link": "https://www.linkedin.com/in/saeedsaedi/"
             },
             {
-                "icon": "https://pics.freeicons.io/uploads/icons/png/6590558241561032669-512.png",
+                "icon": "static/image/instagram.png",
                 "name": "Instagram",
                 "link": "https://www.instagram.com/saeed.saedi.s/profilecard/?igsh=MTRuZmU0MzFlYmVxcg=="
             },
             {
-                "icon": "https://pics.freeicons.io/uploads/icons/png/9243149191579518949-512.png",
+                "icon": "static/image/telegram.png",
                 "name": "Telegram",
                 "link": "https://t.me/SaeedSaedi"
             },
             {
-                "icon": "https://pics.freeicons.io/uploads/icons/png/4422549621553664904-512.png",
+                "icon": "static/image/github.png",
                 "name": "Github",
                 "link": "https://github.com/SaeedSaedi"
             }
