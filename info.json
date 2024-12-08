@@ -1,0 +1,127 @@
+{
+    "Profile": {
+        "General": {
+            "Avatar": "https://avatars.githubusercontent.com/u/1686285?v=4",
+            "FirstName": "Saeed",
+            "LastName": "Saedi",
+            "Email": "saeed.saedi.s@gmail.com",
+            "Phone": "+989151097710",
+            "BirthDate": "1993/02/28 - 1371/12/09",
+            "Address": "Mashhad."
+        },
+        "Socials": [
+            {
+                "icon": "https://pics.freeicons.io/uploads/icons/png/16090541531530099327-512.png",
+                "name": "Linkedin",
+                "link": "https://www.linkedin.com/in/saeedsaedi/"
+            },
+            {
+                "icon": "https://pics.freeicons.io/uploads/icons/png/6590558241561032669-512.png",
+                "name": "Instagram",
+                "link": "https://www.instagram.com/saeed.saedi.s/profilecard/?igsh=MTRuZmU0MzFlYmVxcg=="
+            },
+            {
+                "icon": "https://pics.freeicons.io/uploads/icons/png/9243149191579518949-512.png",
+                "name": "Telegram",
+                "link": "https://t.me/SaeedSaedi"
+            },
+            {
+                "icon": "https://pics.freeicons.io/uploads/icons/png/4422549621553664904-512.png",
+                "name": "Github",
+                "link": "https://github.com/SaeedSaedi"
+            }
+        ],
+        "LangTech": [
+            {
+                "Name": "Management"
+            },
+            {
+                "Name": "Python"
+            },
+            {
+                "Name": "FastAPI"
+            },
+            {
+                "Name": "Django"
+            },
+            {
+                "Name": "Async Programming"
+            },
+            {
+                "Name": "DataBases"
+            },
+            {
+                "Name": "Docker/DockerCompose"
+            },
+            {
+                "Name": "HTML & CSS"
+            },
+            {
+                "Name": "JavaScript"
+            },
+            {
+                "Name": "Redis"
+            },
+            {
+                "Name": "Git/Github/Gitlab"
+            }     
+        ],
+        "Skills": [
+            {
+                "Name": "Self Study"
+            },
+            {
+                "Name": "Space Nerd"
+            },
+            {
+                "Name": "Tech Lover"
+            },
+            {
+                "Name": "Fast Learner"
+            },
+            {
+                "Name": "Creative"
+            }
+        ],
+        "Educations": [
+            {
+                "from": 2011,
+                "to": 2015,
+                "grade": "Bachelor of Science",
+                "in": "Industrial Management",
+                "institute": "Imam Reza International University",
+                "descriptions": ""
+            }
+        ],
+        "Work": [
+            {
+                "from": "2024-Sep",
+                "to": "Present",
+                "title": "Python  Developer",
+                "city": "Mashhad - Iran",
+                "company": "Kifpool.me",
+                "mode": "Full time",
+                "descriptions": "Develop and maintain the API of the kifpool.me APP"
+            },
+            {
+                "from": "2019-Feb",
+                "to": "2024-Sep",
+                "title": "Production Manager",
+                "city": "Mashhad - Iran",
+                "company": "ToosAlem",
+                "mode": "Full time",
+                "descriptions": "Management and supervision of the production line to increase productivity and production volume"
+            },
+            {
+                "from": "2012-Jan",
+                "to": "2016-Jun",
+                "title": "Founder and Developer",
+                "city": "Mashhad - Iran",
+                "company": "GoldenTECH",
+                "mode": "Full time",
+                "descriptions": "Management and develop the company's website[Chikhoobe.com] and applications"
+            }
+        ],
+        "Achievements": []
+    }
+}
