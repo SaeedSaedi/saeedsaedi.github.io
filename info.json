@@ -11,7 +11,7 @@
         },
         "Socials": [
             {
-                "icon": "https://pics.freeicons.io/uploads/icons/png/16090541531530099327-512.png",
+                "icon": "static/image/linkedin.png",
                 "name": "Linkedin",
                 "link": "https://www.linkedin.com/in/saeedsaedi/"
             },
