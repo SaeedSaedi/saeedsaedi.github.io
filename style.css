@@ -1,5 +1,7 @@
 /* ════════════════════════════════════════════════════
    style.css — saeedsaedi.github.io
+   "Engineered Editorial" — editorial type + mono technical
+   layer + indigo→cyan duotone on near-black.
    Custom styles that supplement Tailwind CSS CDN.
    ════════════════════════════════════════════════════ */
 
@@ -8,15 +10,25 @@
   --accent:         #6366f1;
   --accent-light:   #818cf8;
   --accent-deep:    #4f46e5;
+  --cyan:           #22d3ee;
+  --cyan-light:     #67e8f9;
   --accent-bg:      rgba(99, 102, 241, 0.10);
-  --accent-border:  rgba(99, 102, 241, 0.20);
-  --accent-glow:    rgba(99, 102, 241, 0.25);
+  --accent-border:  rgba(99, 102, 241, 0.22);
+  --accent-glow:    rgba(99, 102, 241, 0.28);
+  --cyan-bg:        rgba(34, 211, 238, 0.08);
+  --cyan-border:    rgba(34, 211, 238, 0.22);
+
   --bg:             #09090b;
-  --surface:        #18181b;
+  --surface:        #131316;
+  --surface-2:      #18181b;
   --border:         #27272a;
   --border-light:   #3f3f46;
+  --text:           #fafafa;
   --text-muted:     #a1a1aa;
   --text-dim:       #71717a;
+
+  --duo:            linear-gradient(135deg, #818cf8 0%, #22d3ee 100%);
+  --font-mono:      'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
 /* ─── Base ───────────────────────────────────────── */
@@ -24,72 +36,122 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
 }
 
+::selection { background: rgba(99, 102, 241, 0.35); color: #fff; }
+
 /* ─── Scrollbar ──────────────────────────────────── */
-::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar        { width: 6px; }
 ::-webkit-scrollbar-track  { background: var(--bg); }
 ::-webkit-scrollbar-thumb  { background: var(--border); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
 
-/* ─── Navigation ─────────────────────────────────── */
-.nav-blur {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+/* ─── Mono utility ───────────────────────────────── */
+.mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "ss01", "cv01";
+  letter-spacing: 0;
 }
 
+/* ─── Navigation ─────────────────────────────────── */
+.nav-blur {
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+}
+
+.nav-link { position: relative; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 1.5px;
+  background: var(--duo);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after,
+.nav-link.active::after { transform: scaleX(1); }
+.nav-link.active { color: #fff; }
+
 /* ─── Hero ───────────────────────────────────────── */
-.hero-grid {
+.hero-grid { position: relative; }
+
+/* Grid lines live on a masked ::before layer so the fade never
+   touches the hero content (a mask applies to children otherwise). */
+.hero-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-image:
-    linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(99, 102, 241, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.045) 1px, transparent 1px);
   background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 35%, #000 40%, transparent 100%);
+          mask-image: radial-gradient(ellipse 80% 60% at 50% 35%, #000 40%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-glow {
   position: absolute;
-  width: 680px;
-  height: 680px;
-  top: -140px;
-  right: -140px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.09) 0%, transparent 65%);
+  width: 720px;
+  height: 720px;
+  top: -160px;
+  right: -160px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.11) 0%, transparent 65%);
   pointer-events: none;
   border-radius: 50%;
 }
+.hero-glow--cyan {
+  width: 520px;
+  height: 520px;
+  top: auto;
+  right: auto;
+  bottom: 5rem;   /* fully inside the hero so the radial fades to
+                     transparent before overflow:hidden clips it (no seam) */
+  left: -4rem;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, transparent 70%);
+}
 
+/* Gradient headline word with slow shimmer */
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #818cf8 55%, #a78bfa 100%);
+  background: linear-gradient(110deg, #ffffff 0%, #818cf8 38%, #22d3ee 72%, #ffffff 100%);
+  background-size: 220% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: shimmer 9s linear infinite;
+}
+@keyframes shimmer {
+  to { background-position: 220% center; }
 }
 
-/* ─── Availability badge ─────────────────────────── */
-.avail-badge {
+/* ─── Eyebrow / availability badge ───────────────── */
+.eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
-  padding: 0.375rem 0.875rem;
+  padding: 0.4rem 0.875rem;
   border-radius: 9999px;
-  background: var(--accent-bg);
-  border: 1px solid var(--accent-border);
-  color: var(--accent-light);
-  font-size: 0.8125rem;
+  background: var(--cyan-bg);
+  border: 1px solid var(--cyan-border);
+  color: var(--cyan-light);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-/* ─── Pulse dot (hero badge) ─────────────────────── */
-.pulse-dot {
-  animation: blink 2s ease-in-out infinite;
-}
-
+.pulse-dot { animation: blink 2s ease-in-out infinite; }
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50%       { opacity: 0.35; }
+  50%       { opacity: 0.3; }
 }
 
-/* ─── Scroll-indicator (hero bottom) ────────────── */
+/* ─── Scroll indicator ───────────────────────────── */
 .scroll-indicator {
   position: absolute;
   bottom: 2rem;
@@ -98,7 +160,6 @@ body {
   animation: bounce 2.2s ease-in-out infinite;
   color: #3f3f46;
 }
-
 @keyframes bounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50%       { transform: translateX(-50%) translateY(7px); }
@@ -114,7 +175,8 @@ body {
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  transition: background 0.18s ease, box-shadow 0.18s ease,
+              border-color 0.18s ease, transform 0.18s ease, color 0.18s ease;
 }
 
 .btn-primary {
@@ -123,7 +185,8 @@ body {
 }
 .btn-primary:hover {
   background: var(--accent);
-  box-shadow: 0 8px 24px var(--accent-glow);
+  box-shadow: 0 10px 30px var(--accent-glow);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -134,6 +197,7 @@ body {
 .btn-secondary:hover {
   background: #3f3f46;
   border-color: #52525b;
+  transform: translateY(-1px);
 }
 
 .btn-ghost {
@@ -142,17 +206,38 @@ body {
   border: 1px solid var(--border);
 }
 .btn-ghost:hover {
-  background: var(--surface);
+  background: var(--surface-2);
   color: #f4f4f5;
+  border-color: var(--border-light);
 }
 
-/* ─── Section label ──────────────────────────────── */
+/* ─── Section header (numbered, mono index) ──────── */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+.section-index {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--cyan);
+  letter-spacing: 0.02em;
+}
+.section-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-light), transparent);
+  align-self: center;
+}
 .section-label {
   display: inline-block;
+  font-family: var(--font-mono);
   color: var(--accent-light);
   font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -161,54 +246,76 @@ body {
 .profile-photo {
   width: 180px;
   height: 180px;
-  border-radius: 50%;
+  border-radius: 1.5rem;
   object-fit: cover;
   display: block;
   flex-shrink: 0;
-  border: 3px solid #27272a;
+  border: 1px solid var(--border);
   box-shadow:
-    0 0 0 5px rgba(99, 102, 241, 0.08),
-    0 0 0 6px rgba(99, 102, 241, 0.14);
+    0 0 0 1px rgba(99, 102, 241, 0.12),
+    0 24px 60px rgba(0, 0, 0, 0.5);
 }
 
 /* ─── Cards ──────────────────────────────────────── */
 .card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 1.75rem;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 .card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--accent-border);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
 }
 
-/* Variant: smaller padding for metric/stat cards */
-.card--compact {
-  padding: 1.25rem 1.375rem;
-}
+.card--compact { padding: 1.375rem 1.5rem; }
 
-/* Variant: no hover effect */
 .card--ghost {
-  background: rgba(24, 24, 27, 0.5);
-  border-color: rgba(39, 39, 42, 0.5);
+  background: rgba(19, 19, 22, 0.6);
+  border-color: rgba(39, 39, 42, 0.6);
 }
 .card--ghost:hover {
   transform: none;
   box-shadow: none;
-  border-color: rgba(39, 39, 42, 0.5);
+  border-color: rgba(39, 39, 42, 0.6);
 }
 
-/* ─── Metric number (in stat/about cards) ────────── */
+/* ─── Metric numbers ─────────────────────────────── */
 .metric-num {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: var(--accent-light);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: var(--duo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-variant-numeric: tabular-nums;
   line-height: 1;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Big hero stat */
+.stat-num {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  background: var(--duo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 0.5rem;
 }
 
 /* ─── Timeline ───────────────────────────────────── */
@@ -216,9 +323,9 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 2.5rem;       /* 40px — matches sm:pl-16 offset */
+  width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
+  border-radius: 0.875rem;
   border: 4px solid var(--bg);
   display: flex;
   align-items: center;
@@ -226,78 +333,85 @@ body {
   flex-shrink: 0;
   z-index: 10;
 }
-
-.timeline-dot--active  { background: var(--accent-deep); }
+.timeline-dot--active  { background: var(--accent-deep); box-shadow: 0 0 0 1px var(--accent-border), 0 0 24px var(--accent-glow); }
 .timeline-dot--past    { background: #52525b; }
 .timeline-dot--old     { background: #3f3f46; }
-.timeline-dot--ghost   { background: var(--surface); border: 2px solid var(--border); }
 
-/* ─── Promotion track (career progression) ───────── */
+/* ─── Promotion track ────────────────────────────── */
 .promo-track {
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  margin-top: 0.5rem;
+  margin-top: 0.625rem;
   flex-wrap: wrap;
+  font-family: var(--font-mono);
 }
-.promo-step {
+.promo-step { font-size: 0.7rem; color: var(--text-dim); }
+.promo-step--active { color: var(--cyan-light); font-weight: 500; }
+.promo-arrow { font-size: 0.7rem; color: #3f3f46; }
+
+/* ─── Dates / meta (mono) ────────────────────────── */
+.meta-mono {
+  font-family: var(--font-mono);
   font-size: 0.75rem;
+  letter-spacing: 0.01em;
   color: var(--text-dim);
-}
-.promo-step--active {
-  color: var(--accent-light);
-  font-weight: 500;
-}
-.promo-arrow {
-  font-size: 0.75rem;
-  color: #3f3f46;
 }
 
 /* ─── Current role badge ─────────────────────────── */
 .badge-current {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
   padding: 0.25rem 0.625rem;
   border-radius: 9999px;
   background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.22);
   color: #34d399;
-  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
   font-weight: 500;
+  letter-spacing: 0.04em;
 }
 
-/* ─── Tech tags (experience cards) ──────────────── */
+/* ─── Tech tags ──────────────────────────────────── */
 .tag {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  background: #27272a;
-  color: #a1a1aa;
-  font-size: 0.75rem;
+  padding: 0.25rem 0.6875rem;
+  border-radius: 0.5rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
   font-weight: 500;
+  transition: border-color 0.18s ease, color 0.18s ease;
 }
+.tag:hover { border-color: var(--cyan-border); color: var(--cyan-light); }
 
-/* ─── Skill pills (skills section) ──────────────── */
+/* ─── Skill pills ────────────────────────────────── */
 .skill-pill {
   display: inline-block;
-  padding: 0.375rem 0.875rem;
+  padding: 0.4rem 0.875rem;
   border-radius: 0.5rem;
-  background: #27272a;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   color: #d4d4d8;
   font-size: 0.8125rem;
 }
-
 .skill-pill--accent {
   background: var(--accent-bg);
   border: 1px solid var(--accent-border);
   color: #c7d2fe;
 }
 
-/* ─── Skill category icon wrapper ────────────────── */
+/* ─── Skill / approach icon wrapper ──────────────── */
 .skill-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.875rem;
   background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -308,28 +422,26 @@ body {
 /* ─── Scroll-triggered fade-in ───────────────────── */
 .fade-in {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(20px);
   transition:
-    opacity  0.55s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity  0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Optional stagger via inline --d (transition-delay) */
+.fade-in[style*="--d"] { transition-delay: var(--d); }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .gradient-text { animation: none; }
+  .pulse-dot, .scroll-indicator { animation: none; }
 }
 
-/* ─── Responsive overrides ───────────────────────── */
+/* ─── Responsive ─────────────────────────────────── */
 @media (max-width: 767px) {
-  .profile-photo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .hero-glow {
-    display: none;
-  }
-
-  .card {
-    padding: 1.25rem;
-  }
+  .profile-photo { width: 110px; height: 110px; border-radius: 1.25rem; }
+  .hero-glow { opacity: 0.6; }
+  .card { padding: 1.375rem; }
+  .section-rule { display: none; }
 }

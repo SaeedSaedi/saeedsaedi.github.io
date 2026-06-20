@@ -72,6 +72,7 @@
           var id = entry.target.getAttribute('id');
           navLinks.forEach(function (link) {
             var isActive = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', isActive);
             link.classList.toggle('text-white', isActive);
             link.classList.toggle('text-zinc-400', !isActive);
           });
@@ -81,5 +82,9 @@
 
     sections.forEach(function (section) { navObserver.observe(section); });
   }
+
+  /* ── 4. Dynamic footer year ─────────────────────── */
+  var yearEl = document.getElementById('year');
+  if (yearEl) { yearEl.textContent = String(new Date().getFullYear()); }
 
 })();

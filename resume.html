@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saeed Saedi — Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root { --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    color: #1a1a2e;
+    background: #ffffff;
+    line-height: 1.4;
+    font-size: 8.5pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 10mm 20mm 14mm 20mm;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── Top accent bar ── */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3.5px;
+    background: linear-gradient(90deg, #6366f1, #818cf8, #22d3ee);
+  }
+
+  /* ── Header ── */
+  .header {
+    margin-bottom: 7pt;
+    padding-bottom: 7pt;
+    border-bottom: 1.5px solid #e5e5e5;
+  }
+
+  .header h1 {
+    font-size: 19pt;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #0f0f23;
+    margin-bottom: 1pt;
+  }
+
+  .header .title {
+    font-size: 9.5pt;
+    font-weight: 500;
+    color: #6366f1;
+    letter-spacing: 0.3px;
+    margin-bottom: 5pt;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4pt 14pt;
+    font-family: var(--mono);
+    font-size: 7pt;
+    color: #555;
+  }
+
+  .contact-row a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  .contact-row span::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: #6366f1;
+    border-radius: 50%;
+    margin-right: 5pt;
+    vertical-align: middle;
+  }
+
+  /* ── Metrics bar ── */
+  .metrics-bar {
+    display: flex;
+    justify-content: space-between;
+    background: #f8f8fc;
+    border: 1px solid #ebebf0;
+    border-radius: 5px;
+    padding: 6pt 14pt;
+    margin-bottom: 7pt;
+  }
+
+  .metric {
+    text-align: center;
+    flex: 1;
+  }
+
+  .metric .num {
+    font-size: 12pt;
+    font-weight: 800;
+    color: #6366f1;
+    line-height: 1.2;
+  }
+
+  .metric .label {
+    font-family: var(--mono);
+    font-size: 5.2pt;
+    font-weight: 500;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-top: 0.5pt;
+  }
+
+  /* ── Section headings ── */
+  .section-title {
+    font-family: var(--mono);
+    font-size: 6.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #6366f1;
+    margin-bottom: 5pt;
+    padding-bottom: 2pt;
+    border-bottom: 1px solid #ebebf0;
+  }
+
+  section {
+    margin-bottom: 7pt;
+  }
+
+  /* ── Experience entries ── */
+  .entry {
+    margin-bottom: 6pt;
+  }
+
+  .entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5pt;
+  }
+
+  .entry-header h3 {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #0f0f23;
+  }
+
+  .entry-header .dates {
+    font-family: var(--mono);
+    font-size: 7pt;
+    color: #888;
+    font-weight: 400;
+    flex-shrink: 0;
+    margin-left: 8pt;
+  }
+
+  .entry-sub {
+    font-size: 7.5pt;
+    color: #666;
+    margin-bottom: 3pt;
+  }
+
+  .entry-sub strong {
+    color: #444;
+    font-weight: 600;
+  }
+
+  .promo-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 6pt;
+    font-weight: 600;
+    color: #6366f1;
+    background: #f0f0ff;
+    border: 1px solid #e0e0f5;
+    border-radius: 3px;
+    padding: 0.5pt 4pt;
+    margin-left: 5pt;
+    vertical-align: middle;
+  }
+
+  /* ── Bullet lists ── */
+  .bullets {
+    list-style: none;
+    padding: 0;
+  }
+
+  .bullets li {
+    position: relative;
+    padding-left: 10pt;
+    margin-bottom: 1.5pt;
+    font-size: 7.8pt;
+    color: #333;
+    line-height: 1.45;
+  }
+
+  .bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5.5pt;
+    width: 3px;
+    height: 3px;
+    background: #c7c7d4;
+    border-radius: 50%;
+  }
+
+  .bullets li strong {
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+
+  /* ── Tech tags ── */
+  .tech-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3pt;
+    margin-top: 3pt;
+  }
+
+  .tech-tag {
+    font-family: var(--mono);
+    font-size: 6pt;
+    font-weight: 500;
+    color: #666;
+    background: #f4f4f8;
+    border: 1px solid #e8e8ee;
+    border-radius: 2px;
+    padding: 1pt 4pt;
+  }
+
+  /* ── Skills section ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4pt 20pt;
+  }
+
+  .skill-category {
+    margin-bottom: 1pt;
+  }
+
+  .skill-category .cat-label {
+    font-size: 7.2pt;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.5pt;
+  }
+
+  .skill-category .cat-items {
+    font-size: 7.2pt;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  /* ── Education ── */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .edu-row h3 {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+
+  .edu-row .school {
+    font-size: 7.5pt;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header">
+    <h1>Saeed Saedi</h1>
+    <div class="title">Technical Product Manager</div>
+    <div class="contact-row">
+      <span>Mashhad, Iran &middot; Open to Relocation &amp; Remote</span>
+      <span><a href="mailto:saeed.saedi.s@gmail.com">saeed.saedi.s@gmail.com</a></span>
+      <span><a href="https://linkedin.com/in/saeedsaedi">linkedin.com/in/saeedsaedi</a></span>
+      <span><a href="https://saeedsaedi.github.io">saeedsaedi.github.io</a></span>
+    </div>
+  </header>
+
+  <!-- ═══ METRICS BAR ═══ -->
+  <div class="metrics-bar">
+    <div class="metric">
+      <div class="num">2M+</div>
+      <div class="label">Platform Users</div>
+    </div>
+    <div class="metric">
+      <div class="num">31</div>
+      <div class="label">Services Owned</div>
+    </div>
+    <div class="metric">
+      <div class="num">20</div>
+      <div class="label">Engineers Led</div>
+    </div>
+    <div class="metric">
+      <div class="num">8&times;</div>
+      <div class="label">Production Scale-Up</div>
+    </div>
+    <div class="metric">
+      <div class="num">95%+</div>
+      <div class="label">On-Time Delivery</div>
+    </div>
+  </div>
+
+  <!-- ═══ SUMMARY ═══ -->
+  <section>
+    <div class="section-title">Professional Summary</div>
+    <p style="font-size:7.8pt; color:#333; line-height:1.5;">
+      Technical Product Manager with 13+ years spanning engineering, operations, and product leadership. Own roadmap and delivery for 31 microservices powering a 2M-user cryptocurrency exchange, leading a 20-engineer team at <strong>95%+ on-time delivery</strong>. Previously drove an 8&times; manufacturing scale-up (3K &rarr; 25K units/month) while cutting waste 26% and downtime 18%. Combines hands-on engineering fluency with rigorous product execution to ship complex systems at scale.
+    </p>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section>
+    <div class="section-title">Experience</div>
+
+    <!-- Kifpool.me -->
+    <div class="entry">
+      <div class="entry-header">
+        <h3>Technical Product Manager <span class="promo-badge">2 promotions in 6 months</span></h3>
+        <span class="dates">Sep 2024 &ndash; Present</span>
+      </div>
+      <div class="entry-sub"><strong>Kifpool.me</strong> &mdash; Cryptocurrency Exchange &middot; FinTech</div>
+      <ul class="bullets">
+        <li>Own end-to-end product roadmap and delivery across <strong>31 microservices</strong> (exchange engine, order management, pricing, blockchain integrations), sustaining <strong>95%+ on-time delivery</strong> for a <strong>2M-user</strong> platform</li>
+        <li>Lead a <strong>20-engineer cross-functional team</strong> spanning backend, infrastructure, and blockchain squads; earned <strong>2 promotions in under 6 months</strong> (Developer &rarr; Scrum Master &rarr; TPM)</li>
+        <li>Redesigned sprint execution from monolithic planning to service-level ownership, <strong>cutting cross-team dependency blockers 30%</strong> and improving release predictability</li>
+        <li>Built and shipped an org-wide delivery tracking framework, giving C-suite <strong>real-time visibility</strong> into velocity, risk, and release confidence across all 31 services</li>
+        <li>Translate executive strategy into sprint-level execution plans for a FinTech platform processing <strong>~5,000 daily transactions</strong> across trading, custody, and settlement</li>
+      </ul>
+      <div class="tech-row">
+        <span class="tech-tag">Laravel</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">Go</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">ClickHouse</span>
+        <span class="tech-tag">MySQL</span>
+        <span class="tech-tag">NATS</span>
+        <span class="tech-tag">Docker</span>
+      </div>
+    </div>
+
+    <!-- Toosalem -->
+    <div class="entry">
+      <div class="entry-header">
+        <h3>Production Manager</h3>
+        <span class="dates">Feb 2019 &ndash; Sep 2024</span>
+      </div>
+      <div class="entry-sub"><strong>Toosalem Industrial Company</strong> &mdash; Automotive Manufacturing</div>
+      <ul class="bullets">
+        <li>Scaled production output <strong>8&times;</strong> (3,000 &rarr; 25,000 units/month) by designing a new production line, restructuring shift operations, and optimizing end-to-end throughput</li>
+        <li>Drove <strong>40% efficiency gain</strong> across 3 shifts and ~80 personnel through process reengineering and cross-department coordination (Engineering, Foundry, HR, Supply Chain)</li>
+        <li>Reduced material waste <strong>26%</strong> and unplanned downtime <strong>18%</strong> via data-driven root-cause analysis and preventive maintenance programs</li>
+        <li>Built and deployed <strong>2 internal software systems</strong> (Packaging Management, Maintenance Management) serving 21 users, replacing manual tracking and improving KPI reporting accuracy</li>
+      </ul>
+    </div>
+
+    <!-- GoldenTech -->
+    <div class="entry">
+      <div class="entry-header">
+        <h3>Co-Founder &amp; Developer</h3>
+        <span class="dates">2011</span>
+      </div>
+      <div class="entry-sub"><strong>GoldenTech</strong> &mdash; Chikhoobe Platform &middot; Startup</div>
+      <ul class="bullets">
+        <li>Co-founded a data collection startup; designed and built the full-stack platform, led product ideation through early-stage validation and product-market fit discovery</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section>
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <div class="cat-label">Product &amp; Leadership</div>
+        <div class="cat-items">Technical Product Management, Agile/Scrum, Cross-functional Team Leadership, Product Roadmapping, Sprint Planning &amp; Delivery, Stakeholder Management, OKRs/KPIs, Product Analytics, User Research</div>
+      </div>
+      <div class="skill-category">
+        <div class="cat-label">Technical</div>
+        <div class="cat-items">Python (FastAPI, Django), PHP (Laravel), Go, Node.js, Microservices Architecture, REST API Design, Async Programming</div>
+      </div>
+      <div class="skill-category">
+        <div class="cat-label">Infrastructure &amp; Data</div>
+        <div class="cat-items">Docker, Git (GitHub/GitLab), Redis, NATS, CI/CD Pipelines, PostgreSQL, MySQL, ClickHouse</div>
+      </div>
+      <div class="skill-category">
+        <div class="cat-label">Languages</div>
+        <div class="cat-items">English (Upper-Intermediate), Farsi (Native)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section style="margin-bottom:0;">
+    <div class="section-title">Education</div>
+    <div class="edu-row" style="margin-bottom:4pt;">
+      <div>
+        <h3>Bachelor of Science, Industrial Management</h3>
+        <span class="school">Imam Reza International University &middot; 2011 &ndash; 2015</span>
+      </div>
+    </div>
+    <div class="edu-row">
+      <div>
+        <h3 style="font-size:7.8pt;">Product Management Program</h3>
+        <span class="school">Bozhan School &mdash; Product Strategy, User Research, Product Development, Marketing &amp; Analytics</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
