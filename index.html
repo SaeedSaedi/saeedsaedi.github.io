@@ -91,6 +91,7 @@
       <div class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
         <a href="#about"      class="nav-link hover:text-white transition-colors">About</a>
         <a href="#experience" class="nav-link hover:text-white transition-colors">Experience</a>
+        <a href="#projects"   class="nav-link hover:text-white transition-colors">Projects</a>
         <a href="#skills"     class="nav-link hover:text-white transition-colors">Skills</a>
         <a href="#contact"    class="nav-link hover:text-white transition-colors">Contact</a>
         <a href="resume.html" target="_blank" rel="noopener" class="hover:text-white transition-colors">Résumé ↗</a>
@@ -119,6 +120,7 @@
          class="hidden md:hidden border-t border-zinc-800/60 px-6 py-5 flex flex-col gap-4 text-sm">
       <a href="#about"      class="text-zinc-400 hover:text-white transition-colors">About</a>
       <a href="#experience" class="text-zinc-400 hover:text-white transition-colors">Experience</a>
+      <a href="#projects"   class="text-zinc-400 hover:text-white transition-colors">Projects</a>
       <a href="#skills"     class="text-zinc-400 hover:text-white transition-colors">Skills</a>
       <a href="#contact"    class="text-zinc-400 hover:text-white transition-colors">Contact</a>
       <a href="resume.html" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white transition-colors">Résumé ↗</a>
@@ -581,6 +583,77 @@
 
 
   <!-- ══════════════════════════════════════════════
+       PROJECTS
+       ══════════════════════════════════════════════ -->
+  <section id="projects" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="fade-in mb-14">
+        <div class="section-head">
+          <span class="section-index">04 — Projects</span>
+          <span class="section-rule"></span>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Selected Work</h2>
+        <p class="mt-4 max-w-2xl text-zinc-400 leading-relaxed">Open-source tooling I build and maintain. Documented, licensed and tagged &mdash; not demos.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <a href="https://github.com/SaeedSaedi/sms-sender" target="_blank" rel="noopener"
+           class="card fade-in group block">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">sms-sender</h3>
+            <span class="meta-mono text-xs text-zinc-500">Python</span>
+          </div>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-4">Fault-tolerant bulk SMS CLI for Kavenegar. A SQLite state machine keeps every run idempotent and crash-resumable, and separates permanent failures from retriable ones.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Idempotency</span>
+            <span class="tag">Fault tolerance</span>
+            <span class="tag">Rate limiting</span>
+          </div>
+          <div class="mt-5 meta-mono text-xs text-zinc-600 group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
+        </a>
+
+        <a href="https://github.com/SaeedSaedi/dotfiles" target="_blank" rel="noopener"
+           class="card fade-in group block">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">dotfiles</h3>
+            <span class="meta-mono text-xs text-zinc-500">Shell</span>
+          </div>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-4">Cross-platform development environment. One script provisions Neovim, tmux, Zsh and VS Code on macOS and Ubuntu, with smoke tests and local overrides.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Automation</span>
+            <span class="tag">Reproducibility</span>
+            <span class="tag">macOS / Linux</span>
+          </div>
+          <div class="mt-5 meta-mono text-xs text-zinc-600 group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
+        </a>
+
+        <a href="https://github.com/SaeedSaedi/saeedsaedi.github.io" target="_blank" rel="noopener"
+           class="card fade-in group block">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">saeedsaedi.github.io</h3>
+            <span class="meta-mono text-xs text-zinc-500">HTML</span>
+          </div>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-4">This site. Single page, no build step and no framework &mdash; Tailwind via CDN and vanilla JavaScript, deployed straight from main.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Tailwind</span>
+            <span class="tag">Vanilla JS</span>
+            <span class="tag">GitHub Pages</span>
+          </div>
+          <div class="mt-5 meta-mono text-xs text-zinc-600 group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
+        </a>
+
+      </div>
+
+      <p class="fade-in mt-10 text-sm text-zinc-500">Everything else lives at
+        <a href="https://github.com/SaeedSaedi" target="_blank" rel="noopener"
+           class="text-indigo-400 hover:text-indigo-300 transition-colors">github.com/SaeedSaedi</a>.</p>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
        SKILLS
        ══════════════════════════════════════════════ -->
   <section id="skills" class="py-24 px-6">
@@ -588,7 +661,7 @@
 
       <div class="fade-in mb-14">
         <div class="section-head">
-          <span class="section-index">04 — Skills</span>
+          <span class="section-index">05 — Skills</span>
           <span class="section-rule"></span>
         </div>
         <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Core Competencies</h2>
@@ -683,7 +756,7 @@
           <!-- Degree -->
           <div>
             <div class="section-head mb-4">
-              <span class="section-index">05 — Education</span>
+              <span class="section-index">06 — Education</span>
             </div>
             <h3 class="text-2xl font-bold text-white">
               Bachelor of Science, Industrial Management
