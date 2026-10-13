@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="serif">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +7,10 @@
 
   <!-- SEO & social -->
   <meta name="description"
-        content="Technical Product Manager who ships complex systems at scale — combining hands-on engineering fluency with operational rigor. Own roadmap and delivery for 31 microservices and a 20-engineer team powering a 2M-user exchange at 95%+ on-time delivery." />
+        content="Saeed Saedi, Technical Product Manager at Kifpool.me. Roadmap and delivery for 31 microservices, a 20-engineer team and a crypto exchange with 2M+ users." />
+  <link rel="canonical" href="https://saeedsaedi.github.io/" />
   <meta property="og:title"       content="Saeed Saedi — Technical Product Manager" />
-  <meta property="og:description" content="Engineering background. Product mindset. Shipping at scale. 31 microservices · 20 engineers · 2M+ users · 95%+ on-time delivery." />
+  <meta property="og:description" content="Engineering background. Product mindset. Shipping at scale. Case studies from a crypto exchange and a factory floor." />
   <meta property="og:image"       content="https://saeedsaedi.github.io/assets/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height"content="630" />
@@ -18,24 +19,19 @@
   <meta property="og:type"        content="website" />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="twitter:title"      content="Saeed Saedi — Technical Product Manager" />
-  <meta name="twitter:description"content="Engineering background. Product mindset. Shipping at scale. 31 microservices · 20 engineers · 2M+ users · 95%+ on-time delivery." />
+  <meta name="twitter:description"content="Engineering background. Product mindset. Shipping at scale. Case studies from a crypto exchange and a factory floor." />
   <meta name="twitter:image"      content="https://saeedsaedi.github.io/assets/og-image.jpg" />
   <meta name="twitter:image:alt"  content="Saeed Saedi — Technical Product Manager" />
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-  <!-- Mark JS as available before first paint, so .fade-in content is only
-       hidden when script.js is there to reveal it (see style.css). -->
+  <!-- Lets CSS hide the mobile nav links only when script.js can open the menu -->
   <script>document.documentElement.classList.add('js');</script>
 
-  <!-- Fonts: self-hosted Inter + JetBrains Mono (@font-face in style.css) -->
+  <!-- Self-hosted fonts (@font-face in style.css); preload the two used above the fold -->
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
-
-  <!-- Custom styles, then compiled Tailwind utilities (generated — see tailwind.config.js).
-       Utilities load last so they win over custom classes of equal specificity. -->
+  <link rel="preload" href="assets/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="tailwind.css" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -71,800 +67,467 @@
   }
   </script>
 </head>
+<body>
 
-<body class="bg-zinc-950 text-zinc-100">
+<!-- ═══ NAV ═══ -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">SS</span>Saeed Saedi</a>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#path">Path</a>
+      <a href="#experience">Experience</a>
+      <a href="resume.html" target="_blank" rel="noopener">Résumé ↗</a>
+    </nav>
+    <a class="btn btn--ghost btn--sm" href="#contact">Get in touch</a>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </div>
+</header>
 
-  <!-- ══════════════════════════════════════════════
-       NAV
-       ══════════════════════════════════════════════ -->
-  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-zinc-950/80 border-b border-zinc-800/60">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+<main>
 
-      <a href="#top" class="font-semibold text-zinc-100 tracking-tight hover:text-white transition-colors flex items-center gap-2">
-        <span class="mono text-indigo-400">~/</span>saeed.saedi
+<!-- ═══ HERO — name, one sentence, the four numbers ═══ -->
+<section class="hero" id="top">
+  <div class="wrap hero__grid">
+    <div>
+      <p class="eyebrow">Engineering background · Product mindset · Shipping at scale</p>
+      <h1 class="h1">Saeed Saedi</h1>
+      <p class="lead"><strong>Technical Product Manager</strong> at <a class="link" href="https://kifpool.me" target="_blank" rel="noopener">Kifpool.me</a>, a crypto exchange. I turn what users need and what the business wants into software that ships on time and holds up when the market moves&nbsp;fast.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="#contact">Get in touch
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="resume.html" target="_blank" rel="noopener">View résumé</a>
+      </div>
+    </div>
+    <div class="hero__stats">
+      <div class="stat"><p class="stat__num">2M+</p><p class="stat__label">users on the exchange I ship for</p></div>
+      <div class="stat"><p class="stat__num">31</p><p class="stat__label">microservices on my roadmap</p></div>
+      <div class="stat"><p class="stat__num">20</p><p class="stat__label">engineers across three squads</p></div>
+      <div class="stat"><p class="stat__num">8×</p><p class="stat__label">production scale-up in my previous role</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SELECTED WORK ═══
+     The cards between WORK:START and WORK:END are generated by _tools/build-work.py
+     from the same content as the case-study pages in work/. Edit the content there. -->
+<section class="section" id="work">
+  <div class="wrap">
+    <p class="label">Selected work</p>
+    <h2 class="h2">Problems I’ve owned, end&nbsp;to&nbsp;end</h2>
+    <p class="intro">Five problems from a crypto exchange and a factory floor. Each one covers what was wrong, what I did and what changed.</p>
+<!-- WORK:START -->
+    <div class="work">
+      <a class="case case--featured" href="work/service-ownership.html">
+        <div class="case__visual">
+          <svg viewBox="0 0 560 340" role="img" aria-label="Before: one sprint plan tangled across services. After: three squads that own their services, with explicit dependencies.">
+  <defs><marker id="arw-own" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#818cf8"/></marker></defs>
+  <text x="8" y="20" class="dg-label">BEFORE</text>
+  <text x="8" y="40" class="dg-sub">One sprint plan, 31 services</text>
+  <g stroke="#34343c" stroke-width="1">
+    <line x1="130" y1="94" x2="130" y2="190"/><line x1="186.4" y1="112.3" x2="130" y2="190"/>
+    <line x1="221.3" y1="160.3" x2="130" y2="190"/><line x1="221.3" y1="219.7" x2="130" y2="190"/>
+    <line x1="186.4" y1="267.7" x2="130" y2="190"/><line x1="130" y1="286" x2="130" y2="190"/>
+    <line x1="73.6" y1="267.7" x2="130" y2="190"/><line x1="38.7" y1="219.7" x2="130" y2="190"/>
+    <line x1="38.7" y1="160.3" x2="130" y2="190"/><line x1="73.6" y1="112.3" x2="130" y2="190"/>
+  </g>
+  <g stroke="#55555f" stroke-width="1" stroke-dasharray="3 4">
+    <line x1="186.4" y1="112.3" x2="73.6" y2="267.7"/><line x1="221.3" y1="160.3" x2="38.7" y2="219.7"/>
+    <line x1="130" y1="94" x2="186.4" y2="267.7"/><line x1="73.6" y1="112.3" x2="221.3" y2="219.7"/>
+  </g>
+  <g fill="#17171b" stroke="#46464f">
+    <rect x="122" y="86" width="16" height="16" rx="3"/><rect x="178.4" y="104.3" width="16" height="16" rx="3"/>
+    <rect x="213.3" y="152.3" width="16" height="16" rx="3"/><rect x="213.3" y="211.7" width="16" height="16" rx="3"/>
+    <rect x="178.4" y="259.7" width="16" height="16" rx="3"/><rect x="122" y="278" width="16" height="16" rx="3"/>
+    <rect x="65.6" y="259.7" width="16" height="16" rx="3"/><rect x="30.7" y="211.7" width="16" height="16" rx="3"/>
+    <rect x="30.7" y="152.3" width="16" height="16" rx="3"/><rect x="65.6" y="104.3" width="16" height="16" rx="3"/>
+  </g>
+  <rect x="94" y="174" width="72" height="32" rx="8" fill="#16163a" stroke="#6366f1"/>
+  <text x="130" y="194" text-anchor="middle" class="dg-small" style="fill:#a5b4fc">SPRINT</text>
+  <g fill="#fbbf24"><circle cx="158.2" cy="151.2" r="4"/><circle cx="84.4" cy="204.9" r="4"/><circle cx="117.9" cy="144.5" r="4"/></g>
+  <circle cx="12" cy="325" r="4" fill="#fbbf24"/><text x="22" y="329" class="dg-sub">blocked dependency</text>
+  <line x1="280" y1="12" x2="280" y2="328" stroke="#26262c" stroke-dasharray="3 5"/>
+  <text x="304" y="20" class="dg-label">AFTER</text>
+  <text x="304" y="40" class="dg-sub">3 squads, clear owners</text>
+  <g fill="rgba(255,255,255,0.015)" stroke="#3a3a42" stroke-dasharray="4 4">
+    <rect x="304" y="78" width="104" height="104" rx="14"/><rect x="448" y="78" width="104" height="104" rx="14"/><rect x="376" y="214" width="104" height="104" rx="14"/>
+  </g>
+  <g fill="rgba(34,211,238,0.16)"><circle cx="320" cy="96" r="9"/><circle cx="464" cy="96" r="9"/><circle cx="392" cy="232" r="9"/></g>
+  <g fill="#22d3ee"><circle cx="320" cy="96" r="4.5"/><circle cx="464" cy="96" r="4.5"/><circle cx="392" cy="232" r="4.5"/></g>
+  <text x="332" y="100" class="dg-small">BACKEND</text><text x="476" y="100" class="dg-small">INFRA</text><text x="404" y="236" class="dg-small">BLOCKCHAIN</text>
+  <g fill="#17171b" stroke="#55555f">
+    <rect x="334" y="120" width="16" height="16" rx="3"/><rect x="362" y="120" width="16" height="16" rx="3"/><rect x="334" y="148" width="16" height="16" rx="3"/><rect x="362" y="148" width="16" height="16" rx="3"/>
+    <rect x="478" y="120" width="16" height="16" rx="3"/><rect x="506" y="120" width="16" height="16" rx="3"/><rect x="478" y="148" width="16" height="16" rx="3"/><rect x="506" y="148" width="16" height="16" rx="3"/>
+    <rect x="406" y="256" width="16" height="16" rx="3"/><rect x="434" y="256" width="16" height="16" rx="3"/><rect x="406" y="284" width="16" height="16" rx="3"/><rect x="434" y="284" width="16" height="16" rx="3"/>
+  </g>
+  <g stroke="#818cf8" stroke-width="1.5" fill="none" marker-end="url(#arw-own)">
+    <line x1="410" y1="130" x2="444" y2="130"/><path d="M356 184 V250 Q356 266 372 266"/><path d="M500 184 V250 Q500 266 484 266"/>
+  </g>
+  <line x1="304" y1="325" x2="322" y2="325" stroke="#818cf8" stroke-width="1.5"/><text x="328" y="329" class="dg-sub">explicit dependency</text>
+  <circle cx="462" cy="325" r="4" fill="#22d3ee"/><text x="472" y="329" class="dg-sub">owner</text>
+</svg>
+        </div>
+        <div class="case__body">
+          <p class="case__meta">Kifpool.me · Delivery</p>
+          <h3 class="case__title">From one sprint plan to service ownership</h3>
+          <p class="case__text">Delivery for 31 microservices ran on one shared sprint plan, so cross-team dependencies kept surfacing mid-sprint. I moved delivery to service-level ownership and put dependencies on the table before each sprint.</p>
+          <div class="case__result"><span class="case__num">−30%</span><span class="case__num-label">cross-team dependency blockers, and more predictable releases</span></div>
+          <span class="case__cta">Read the case study</span>
+        </div>
       </a>
-
-      <!-- Desktop links -->
-      <div class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
-        <a href="#about"      class="nav-link hover:text-white transition-colors">About</a>
-        <a href="#experience" class="nav-link hover:text-white transition-colors">Experience</a>
-        <a href="#projects"   class="nav-link hover:text-white transition-colors">Projects</a>
-        <a href="#skills"     class="nav-link hover:text-white transition-colors">Skills</a>
-        <a href="#contact"    class="nav-link hover:text-white transition-colors">Contact</a>
-        <a href="resume.html" target="_blank" rel="noopener" class="hover:text-white transition-colors">Résumé ↗</a>
-      </div>
-
-      <!-- Nav CTA -->
-      <a href="mailto:saeed.saedi.s@gmail.com"
-         class="btn btn-primary hidden md:inline-flex px-4 py-2 text-sm">
-        Hire Me
+      <a class="case" href="work/delivery-visibility.html">
+        <div class="case__visual">
+          <svg viewBox="0 0 520 300" role="img" aria-label="Illustrative delivery board: 31 services marked on track, at risk or shipped, with velocity, risk and release-confidence bars.">
+  <rect x="0.5" y="0.5" width="519" height="299" rx="12" fill="#0d0d10" stroke="#26262b"/>
+  <g fill="#2c2c33"><circle cx="18" cy="18" r="4"/><circle cx="32" cy="18" r="4"/><circle cx="46" cy="18" r="4"/></g>
+  <text x="64" y="22" class="dg-small">delivery · 31 services</text>
+  <circle cx="466" cy="18" r="3.5" fill="#34d399"/><text x="476" y="22" class="dg-small" style="fill:#34d399">LIVE</text>
+  <line x1="0.5" y1="36" x2="519.5" y2="36" stroke="#1e1e23"/>
+  <g>
+    <rect x="20" y="52" width="53" height="30" rx="6" fill="rgba(129,140,248,.10)" stroke="rgba(129,140,248,.5)"/><rect x="28" y="72" width="14" height="3" rx="1.5" fill="rgba(129,140,248,.8)"/>
+    <rect x="81" y="52" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="89" y="72" width="27" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="142" y="52" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="150" y="72" width="16" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="203" y="52" width="53" height="30" rx="6" fill="rgba(129,140,248,.10)" stroke="rgba(129,140,248,.5)"/><rect x="211" y="72" width="29" height="3" rx="1.5" fill="rgba(129,140,248,.8)"/>
+    <rect x="264" y="52" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="272" y="72" width="18" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="325" y="52" width="53" height="30" rx="6" fill="rgba(251,191,36,.10)" stroke="rgba(251,191,36,.5)"/><rect x="333" y="72" width="31" height="3" rx="1.5" fill="rgba(251,191,36,.8)"/>
+    <rect x="386" y="52" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="394" y="72" width="20" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="447" y="52" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="455" y="72" width="33" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="20" y="90" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="28" y="110" width="22" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="81" y="90" width="53" height="30" rx="6" fill="rgba(129,140,248,.10)" stroke="rgba(129,140,248,.5)"/><rect x="89" y="110" width="35" height="3" rx="1.5" fill="rgba(129,140,248,.8)"/>
+    <rect x="142" y="90" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="150" y="110" width="24" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="203" y="90" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="211" y="110" width="37" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="264" y="90" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="272" y="110" width="26" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="325" y="90" width="53" height="30" rx="6" fill="rgba(251,191,36,.10)" stroke="rgba(251,191,36,.5)"/><rect x="333" y="110" width="15" height="3" rx="1.5" fill="rgba(251,191,36,.8)"/>
+    <rect x="386" y="90" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="394" y="110" width="28" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="447" y="90" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="455" y="110" width="17" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="20" y="128" width="53" height="30" rx="6" fill="rgba(129,140,248,.10)" stroke="rgba(129,140,248,.5)"/><rect x="28" y="148" width="30" height="3" rx="1.5" fill="rgba(129,140,248,.8)"/>
+    <rect x="81" y="128" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="89" y="148" width="19" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="142" y="128" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="150" y="148" width="32" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="203" y="128" width="53" height="30" rx="6" fill="rgba(129,140,248,.10)" stroke="rgba(129,140,248,.5)"/><rect x="211" y="148" width="21" height="3" rx="1.5" fill="rgba(129,140,248,.8)"/>
+    <rect x="264" y="128" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="272" y="148" width="34" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="325" y="128" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="333" y="148" width="23" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="386" y="128" width="53" height="30" rx="6" fill="rgba(251,191,36,.10)" stroke="rgba(251,191,36,.5)"/><rect x="394" y="148" width="36" height="3" rx="1.5" fill="rgba(251,191,36,.8)"/>
+    <rect x="447" y="128" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="455" y="148" width="25" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="20" y="166" width="53" height="30" rx="6" fill="rgba(129,140,248,.10)" stroke="rgba(129,140,248,.5)"/><rect x="28" y="186" width="14" height="3" rx="1.5" fill="rgba(129,140,248,.8)"/>
+    <rect x="81" y="166" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="89" y="186" width="27" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="142" y="166" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="150" y="186" width="16" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="203" y="166" width="53" height="30" rx="6" fill="rgba(251,191,36,.10)" stroke="rgba(251,191,36,.5)"/><rect x="211" y="186" width="29" height="3" rx="1.5" fill="rgba(251,191,36,.8)"/>
+    <rect x="264" y="166" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="272" y="186" width="18" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="325" y="166" width="53" height="30" rx="6" fill="rgba(52,211,153,.10)" stroke="rgba(52,211,153,.5)"/><rect x="333" y="186" width="31" height="3" rx="1.5" fill="rgba(52,211,153,.8)"/>
+    <rect x="386" y="166" width="53" height="30" rx="6" fill="rgba(129,140,248,.10)" stroke="rgba(129,140,248,.5)"/><rect x="394" y="186" width="20" height="3" rx="1.5" fill="rgba(129,140,248,.8)"/>
+  </g>
+  <text x="20" y="226" class="dg-small">VELOCITY</text>
+  <text x="187" y="226" class="dg-small">RISK</text>
+  <text x="354" y="226" class="dg-small">RELEASE CONFIDENCE</text>
+  <g fill="#1e1e23"><rect x="20" y="236" width="146" height="6" rx="3"/><rect x="187" y="236" width="146" height="6" rx="3"/><rect x="354" y="236" width="146" height="6" rx="3"/></g>
+  <rect x="20" y="236" width="104" height="6" rx="3" fill="#818cf8"/>
+  <rect x="187" y="236" width="44" height="6" rx="3" fill="#fbbf24"/>
+  <rect x="354" y="236" width="118" height="6" rx="3" fill="#22d3ee"/>
+  <rect x="20" y="268" width="10" height="10" rx="2" fill="rgba(52,211,153,.12)" stroke="rgba(52,211,153,.6)"/><text x="36" y="277" class="dg-sub">on track</text>
+  <rect x="104" y="268" width="10" height="10" rx="2" fill="rgba(251,191,36,.12)" stroke="rgba(251,191,36,.65)"/><text x="120" y="277" class="dg-sub">at risk</text>
+  <rect x="180" y="268" width="10" height="10" rx="2" fill="rgba(129,140,248,.16)" stroke="rgba(129,140,248,.6)"/><text x="196" y="277" class="dg-sub">shipped</text>
+  <text x="500" y="277" text-anchor="end" class="dg-sub" font-style="italic">illustrative</text>
+</svg>
+        </div>
+        <div class="case__body">
+          <p class="case__meta">Kifpool.me · Visibility</p>
+          <h3 class="case__title">Real-time delivery visibility for the <span class="nowrap">C-suite</span></h3>
+          <p class="case__text">An org-wide tracking framework that shows velocity, risk and release confidence for every service, so leadership sees delivery as it happens instead of in status meetings.</p>
+          <div class="case__result"><span class="case__num">31/31</span><span class="case__num-label">services tracked in real time</span></div>
+          <span class="case__cta">Read the case study</span>
+        </div>
       </a>
-
-      <!-- Mobile hamburger -->
-      <button id="mobile-btn" aria-label="Toggle menu" aria-expanded="false"
-              class="md:hidden text-zinc-400 hover:text-white transition-colors p-1">
-        <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-        <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
+      <a class="case" href="work/safe-releases.html">
+        <div class="case__visual">
+          <svg viewBox="0 0 520 300" role="img" aria-label="Illustrative staged rollout: internal accounts first, then a small share of users, a larger share and everyone, with a tested kill switch and a rollback threshold set before launch.">
+  <rect x="0.5" y="0.5" width="519" height="299" rx="12" fill="#0d0d10" stroke="#26262b"/>
+  <g fill="#2c2c33"><circle cx="18" cy="18" r="4"/><circle cx="32" cy="18" r="4"/><circle cx="46" cy="18" r="4"/></g>
+  <text x="64" y="22" class="dg-small">release plan · touches money</text>
+  <text x="424" y="22" text-anchor="end" class="dg-small">kill switch</text>
+  <rect x="432" y="10" width="30" height="16" rx="8" fill="rgba(52,211,153,.16)" stroke="rgba(52,211,153,.6)"/>
+  <circle cx="453" cy="18" r="5" fill="#34d399"/>
+  <text x="470" y="22" class="dg-small" style="fill:#34d399">TESTED</text>
+  <line x1="0.5" y1="36" x2="519.5" y2="36" stroke="#1e1e23"/>
+  <text x="20" y="60" class="dg-small">1 INTERNAL</text><text x="144" y="60" class="dg-small">2 SMALL SHARE</text>
+  <text x="268" y="60" class="dg-small">3 LARGER SHARE</text><text x="392" y="60" class="dg-small">4 EVERYONE</text>
+  <g fill="#1e1e23"><rect x="20" y="70" width="108" height="8" rx="4"/><rect x="144" y="70" width="108" height="8" rx="4"/><rect x="268" y="70" width="108" height="8" rx="4"/><rect x="392" y="70" width="108" height="8" rx="4"/></g>
+  <rect x="20" y="70" width="8" height="8" rx="4" fill="#818cf8"/><rect x="144" y="70" width="20" height="8" rx="4" fill="#818cf8"/>
+  <rect x="268" y="70" width="50" height="8" rx="4" fill="#818cf8"/><rect x="392" y="70" width="108" height="8" rx="4" fill="#22d3ee"/>
+  <text x="20" y="110" class="dg-small">ERROR RATE</text>
+  <text x="500" y="122" text-anchor="end" class="dg-small" style="fill:#fbbf24">ROLLBACK IF CROSSED</text>
+  <line x1="20" y1="130" x2="500" y2="130" stroke="#fbbf24" stroke-dasharray="5 5" opacity=".75"/>
+  <g stroke="#26262c" stroke-dasharray="2 4"><line x1="136" y1="96" x2="136" y2="226"/><line x1="260" y1="96" x2="260" y2="226"/><line x1="384" y1="96" x2="384" y2="226"/></g>
+  <line x1="20" y1="226" x2="500" y2="226" stroke="#2b2b31"/>
+  <polyline points="20,206 60,203 100,208 136,200 172,205 212,198 260,203 300,197 340,204 384,199 424,203 462,196 500,200" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-linejoin="round"/>
+  <rect x="20" y="248" width="62" height="24" rx="7" fill="#121215" stroke="#2b2b31"/><path d="M30 260 l3 3 l6 -6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="44" y="264" class="dg-small" style="fill:#a1a1aa">logs</text><rect x="90" y="248" width="82" height="24" rx="7" fill="#121215" stroke="#2b2b31"/><path d="M100 260 l3 3 l6 -6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="114" y="264" class="dg-small" style="fill:#a1a1aa">metrics</text><rect x="180" y="248" width="75" height="24" rx="7" fill="#121215" stroke="#2b2b31"/><path d="M190 260 l3 3 l6 -6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="204" y="264" class="dg-small" style="fill:#a1a1aa">alerts</text><rect x="263" y="248" width="82" height="24" rx="7" fill="#121215" stroke="#2b2b31"/><path d="M273 260 l3 3 l6 -6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="287" y="264" class="dg-small" style="fill:#a1a1aa">runbook</text>
+  <text x="500" y="266" text-anchor="end" class="dg-sub" font-style="italic">illustrative</text>
+</svg>
+        </div>
+        <div class="case__body">
+          <p class="case__meta">Kifpool.me · Reliability</p>
+          <h3 class="case__title">Releases that protect people’s money</h3>
+          <p class="case__text">On an exchange, a bad release can touch people’s money. I made rollout plans, rollback paths and monitoring a standard part of shipping anything that touches financial data.</p>
+          <div class="case__result"><span class="case__num">48 h</span><span class="case__num-label">from a serious incident to a blameless postmortem, with fixes tracked to done</span></div>
+          <span class="case__cta">Read the case study</span>
+        </div>
+      </a>
+      <a class="case" href="work/production-line.html">
+        <div class="case__visual">
+          <svg viewBox="0 0 520 300" role="img" aria-label="Monthly output grew from 3,000 to 25,000 units, an eightfold increase.">
+  <defs>
+    <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#4f46e5"/><stop offset=".55" stop-color="#6366f1"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+    <linearGradient id="txtGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c7d2fe"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+    <marker id="arw-out" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#67e8f9"/></marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="519" height="299" rx="12" fill="#0d0d10" stroke="#26262b"/>
+  <line x1="32" y1="236" x2="488" y2="236" stroke="#2b2b31"/>
+  <rect x="112" y="213" width="92" height="23" rx="5" fill="#26262c" stroke="#3a3a42"/>
+  <rect x="316" y="46" width="92" height="190" rx="6" fill="url(#barGrad)" opacity=".92"/>
+  <text x="158" y="200" text-anchor="middle" class="dg-num">3K</text>
+  <text x="362" y="34" text-anchor="middle" class="dg-num">25K</text>
+  <path d="M210 206 C262 206 270 100 306 92" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-dasharray="4 5" marker-end="url(#arw-out)"/>
+  <text x="228" y="132" text-anchor="middle" class="dg-big" fill="url(#txtGrad)">8×</text>
+  <text x="158" y="260" text-anchor="middle" class="dg-small">BEFORE</text>
+  <text x="362" y="260" text-anchor="middle" class="dg-small">AFTER</text>
+  <text x="260" y="284" text-anchor="middle" class="dg-sub">units per month</text>
+</svg>
+        </div>
+        <div class="case__body">
+          <p class="case__meta">Toosalem Industrial · Operations</p>
+          <h3 class="case__title">Scaling a production line 8×</h3>
+          <p class="case__text">Designed a new production line and restructured shift operations to take output from 3,000 to 25,000 units a month, with less waste and less downtime.</p>
+          <div class="case__result"><span class="case__num">8×</span><span class="case__num-label">monthly output, with −26% waste and −18% downtime</span></div>
+          <span class="case__cta">Read the case study</span>
+        </div>
+      </a>
+      <a class="case" href="work/factory-software.html">
+        <div class="case__visual">
+          <svg viewBox="0 0 520 300" role="img" aria-label="Illustrative: manual tracking replaced by two internal systems, for packaging and maintenance, that feed KPI reports and are used by 21 people.">
+  <defs>
+    <marker id="arw-fac" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#818cf8"/></marker>
+    <linearGradient id="facGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#4f46e5"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="519" height="299" rx="12" fill="#0d0d10" stroke="#26262b"/>
+  <text x="24" y="34" class="dg-label">BEFORE</text>
+  <text x="24" y="52" class="dg-sub">manual tracking</text>
+  <rect x="44" y="92" width="92" height="120" rx="6" fill="#121215" stroke="#2b2b31"/>
+  <rect x="36" y="84" width="92" height="120" rx="6" fill="#141418" stroke="#34343c"/>
+  <rect x="28" y="76" width="92" height="120" rx="6" fill="#17171b" stroke="#3a3a42"/>
+  <g stroke="#3a3a42" stroke-width="3" stroke-linecap="round">
+    <line x1="40" y1="98" x2="104" y2="98"/><line x1="40" y1="114" x2="92" y2="114"/><line x1="40" y1="130" x2="98" y2="130"/>
+    <line x1="40" y1="146" x2="84" y2="146"/><line x1="40" y1="162" x2="96" y2="162"/><line x1="40" y1="178" x2="76" y2="178"/>
+  </g>
+  <g fill="#fbbf24"><circle cx="108" cy="130" r="3.5"/><circle cx="88" cy="178" r="3.5"/></g>
+  <line x1="146" y1="150" x2="190" y2="150" stroke="#818cf8" stroke-width="1.5" marker-end="url(#arw-fac)"/>
+  <text x="206" y="34" class="dg-label">AFTER</text>
+  <text x="206" y="52" class="dg-sub">two internal systems</text>
+  <rect x="206" y="72" width="156" height="72" rx="8" fill="#121215" stroke="#2b2b31"/>
+  <text x="218" y="90" class="dg-small">PACKAGING</text>
+  <rect x="218" y="100" width="6" height="6" rx="1.5" fill="#22d3ee"/><line x1="232" y1="103" x2="320" y2="103" stroke="#3a3a42" stroke-width="3" stroke-linecap="round"/><rect x="218" y="112" width="6" height="6" rx="1.5" fill="#818cf8"/><line x1="232" y1="115" x2="302" y2="115" stroke="#3a3a42" stroke-width="3" stroke-linecap="round"/><rect x="218" y="124" width="6" height="6" rx="1.5" fill="#22d3ee"/><line x1="232" y1="127" x2="328" y2="127" stroke="#3a3a42" stroke-width="3" stroke-linecap="round"/>
+  <rect x="206" y="156" width="156" height="72" rx="8" fill="#121215" stroke="#2b2b31"/>
+  <text x="218" y="174" class="dg-small">MAINTENANCE</text>
+  <rect x="218" y="184" width="6" height="6" rx="1.5" fill="#818cf8"/><line x1="232" y1="187" x2="308" y2="187" stroke="#3a3a42" stroke-width="3" stroke-linecap="round"/><rect x="218" y="196" width="6" height="6" rx="1.5" fill="#22d3ee"/><line x1="232" y1="199" x2="330" y2="199" stroke="#3a3a42" stroke-width="3" stroke-linecap="round"/><rect x="218" y="208" width="6" height="6" rx="1.5" fill="#818cf8"/><line x1="232" y1="211" x2="296" y2="211" stroke="#3a3a42" stroke-width="3" stroke-linecap="round"/>
+  <line x1="372" y1="150" x2="404" y2="150" stroke="#818cf8" stroke-width="1.5" marker-end="url(#arw-fac)"/>
+  <rect x="414" y="80" width="86" height="140" rx="10" fill="#121215" stroke="#2b2b31"/>
+  <text x="426" y="100" class="dg-small">KPI</text>
+  <line x1="424" y1="204" x2="490" y2="204" stroke="#2b2b31"/>
+  <g fill="url(#facGrad)"><rect x="428" y="170" width="10" height="34" rx="2"/><rect x="444" y="152" width="10" height="52" rx="2"/><rect x="460" y="160" width="10" height="44" rx="2"/><rect x="476" y="138" width="10" height="66" rx="2"/></g>
+  <rect x="206" y="246" width="84" height="26" rx="8" fill="#121215" stroke="#2b2b31"/><text x="218" y="263" class="dg-small" style="fill:#a1a1aa">21 users</text>
+  <rect x="298" y="246" width="92" height="26" rx="8" fill="#121215" stroke="#2b2b31"/><text x="310" y="263" class="dg-small" style="fill:#a1a1aa">2 systems</text>
+  <text x="500" y="266" text-anchor="end" class="dg-sub" font-style="italic">illustrative</text>
+</svg>
+        </div>
+        <div class="case__body">
+          <p class="case__meta">Toosalem Industrial · Internal product</p>
+          <h3 class="case__title">Software for a factory floor</h3>
+          <p class="case__text">Production depended on manual tracking. I built two internal systems, for packaging and for maintenance, that 21 people used and that made our KPI reporting more accurate.</p>
+          <div class="case__result"><span class="case__num">21</span><span class="case__num-label">people using two internal systems</span></div>
+          <span class="case__cta">Read the case study</span>
+        </div>
+      </a>
     </div>
+<!-- WORK:END -->
+  </div>
+</section>
 
-    <!-- Mobile menu dropdown -->
-    <div id="mobile-menu"
-         class="hidden md:hidden border-t border-zinc-800/60 px-6 py-5 flex flex-col gap-4 text-sm">
-      <a href="#about"      class="text-zinc-400 hover:text-white transition-colors">About</a>
-      <a href="#experience" class="text-zinc-400 hover:text-white transition-colors">Experience</a>
-      <a href="#projects"   class="text-zinc-400 hover:text-white transition-colors">Projects</a>
-      <a href="#skills"     class="text-zinc-400 hover:text-white transition-colors">Skills</a>
-      <a href="#contact"    class="text-zinc-400 hover:text-white transition-colors">Contact</a>
-      <a href="resume.html" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white transition-colors">Résumé ↗</a>
-      <a href="mailto:saeed.saedi.s@gmail.com" class="text-indigo-400 font-medium">Hire Me →</a>
+<!-- ═══ THE PATH ═══ -->
+<section class="section" id="path">
+  <div class="wrap">
+    <p class="label">The path</p>
+    <h2 class="h2 h2--wide"><em>Engineer</em> <span class="arrow">→</span> <em class="nowrap">Production manager</em> <span class="arrow">→</span> <em class="nowrap">Product manager</em></h2>
+    <p class="intro">A non-linear career, on purpose. What connects it is building systems that stay precise and reliable at scale: first in code, then on a production line, now in a product used by millions.</p>
+    <ol class="path">
+      <li class="path__step">
+        <span class="path__year">2011</span>
+        <h3 class="h3">Engineer &amp; co-founder</h3>
+        <p>Co-founded a data-collection startup and designed and built the full-stack platform, from first idea to early product-market-fit work.</p>
+        <span class="chip">Co-founder · GoldenTech</span>
+      </li>
+      <li class="path__step">
+        <span class="path__year">2019</span>
+        <h3 class="h3">Production Manager</h3>
+        <p>Ran production for an automotive manufacturer, with 80 people across three shifts, and scaled output eightfold with a new line.</p>
+        <span class="chip">8× output · −26% waste</span>
+      </li>
+      <li class="path__step is-now">
+        <span class="path__year">2024 — now</span>
+        <h3 class="h3">Technical Product Manager</h3>
+        <p>Joined Kifpool.me as a backend developer and moved to Scrum Master. Today I own the roadmap for 31 microservices.</p>
+        <span class="chip">31 services · 20 engineers</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <p class="label">Experience</p>
+    <h2 class="h2">Where I’ve done it</h2>
+    <div class="roles">
+      <article class="role">
+        <div>
+          <p class="role__when">Sep 2024 — now</p>
+          <p class="role__org">Kifpool.me</p>
+          <p class="role__kind">Cryptocurrency exchange</p>
+          <span class="role__now">Current</span>
+        </div>
+        <div>
+          <h3 class="role__title">Technical Product Manager</h3>
+          <p class="role__track">Backend Developer → Scrum Master → <b>Technical PM</b></p>
+          <ul>
+            <li>Own roadmap and delivery for 31 microservices — exchange engine, order management, pricing and blockchain integrations — at 95%+ on-time delivery.</li>
+            <li>Lead a 20-engineer team across backend, infrastructure and blockchain squads.</li>
+            <li>Moved delivery to service-level ownership (−30% cross-team blockers) and built real-time delivery tracking for the C-suite.</li>
+          </ul>
+          <p class="role__stack">Laravel · FastAPI · Go · Node.js · PostgreSQL · ClickHouse · MySQL · NATS · Docker</p>
+        </div>
+      </article>
+      <article class="role">
+        <div>
+          <p class="role__when">Feb 2019 — Sep 2024</p>
+          <p class="role__org">Toosalem Industrial</p>
+          <p class="role__kind">Automotive manufacturing</p>
+        </div>
+        <div>
+          <h3 class="role__title">Production Manager</h3>
+          <ul>
+            <li>Scaled output 8× (3,000 → 25,000 units a month) with a new production line and restructured shifts.</li>
+            <li>Raised efficiency 40% across three shifts and ~80 people; cut material waste 26% and unplanned downtime 18%.</li>
+            <li>Built two internal systems — packaging and maintenance management — used by 21 people.</li>
+          </ul>
+          <p class="role__stack">Operations · Process design · KPI tracking · Internal tools</p>
+        </div>
+      </article>
+      <article class="role">
+        <div>
+          <p class="role__when">2011</p>
+          <p class="role__org">GoldenTech</p>
+          <p class="role__kind">Startup · Chikhoobe platform</p>
+        </div>
+        <div>
+          <h3 class="role__title">Co-Founder &amp; Developer</h3>
+          <ul>
+            <li>Co-founded a data-collection startup; designed and built the full-stack platform and led early validation.</li>
+          </ul>
+        </div>
+      </article>
     </div>
-  </nav>
+    <a class="more-link link" href="resume.html" target="_blank" rel="noopener">Full résumé →</a>
+  </div>
+</section>
 
-  <main>
+<!-- ═══ HOW I WORK ═══ -->
+<section class="section" id="how">
+  <div class="wrap">
+    <p class="label">How I work</p>
+    <h2 class="h2">Five working principles</h2>
+    <ol class="principles">
+      <li class="principle"><span class="principle__n">01</span><h3 class="principle__t">Dependencies on day zero</h3><p class="principle__d">Any feature that touches more than one service gets a dependency map before the sprint starts, not halfway through it.</p></li>
+      <li class="principle"><span class="principle__n">02</span><h3 class="principle__t">Every sprint has a cut list</h3><p class="principle__d">We agree up front what we drop first if time gets tight, so a slip is a decision, not a surprise.</p></li>
+      <li class="principle"><span class="principle__n">03</span><h3 class="principle__t">Success is defined before we build</h3><p class="principle__d">Every feature starts with the metric it should move, and we check that metric after we ship.</p></li>
+      <li class="principle"><span class="principle__n">04</span><h3 class="principle__t">Decisions go in writing</h3><p class="principle__d">Options, criteria and the decision are written down before we build, so nobody re-argues it three sprints later.</p></li>
+      <li class="principle"><span class="principle__n">05</span><h3 class="principle__t">Nothing ships blind</h3><p class="principle__d">Logs, metrics, alerts and a runbook before production, and a rollback path before launch.</p></li>
+    </ol>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════════════
-       HERO
-       ══════════════════════════════════════════════ -->
-  <section id="top" class="hero-grid relative min-h-screen flex flex-col justify-center overflow-hidden pt-24 pb-16 md:pb-24 px-6">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-glow hero-glow--cyan" aria-hidden="true"></div>
+<!-- ═══ TESTIMONIAL — add back once there is a real quote:
+<section class="section">
+  <div class="wrap">
+    <figure class="quote">
+      <blockquote>“…”</blockquote>
+      <figcaption>NAME · ROLE, COMPANY</figcaption>
+    </figure>
+  </div>
+</section>
+═══ -->
 
-    <div class="max-w-6xl mx-auto w-full relative z-10">
-      <div class="max-w-4xl">
-
-        <!-- Eyebrow -->
-        <div class="eyebrow mb-8">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0 pulse-dot"></span>
-          Available for opportunities
-        </div>
-
-        <!-- Headline -->
-        <h1 class="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-[-0.03em] leading-[1.0] mb-7">
-          <span class="gradient-text">Technical</span><br />Product Manager
-        </h1>
-
-        <p class="text-xl md:text-2xl text-zinc-300 font-light mb-3 max-w-2xl leading-relaxed">
-          Engineering background. Product mindset. Shipping at scale.
-        </p>
-        <p class="text-base md:text-lg text-zinc-400 mb-5 max-w-xl leading-relaxed">
-          I turn ambiguous business goals into precise technical execution.
-        </p>
-        <p class="text-base text-dim mb-10 max-w-xl leading-relaxed">
-          Leading <strong class="text-zinc-300 font-medium">31 microservices</strong>, a team of
-          <strong class="text-zinc-300 font-medium">20 engineers</strong>, and a platform serving
-          <strong class="text-zinc-300 font-medium">2M+ users</strong> at Kifpool.me.
-        </p>
-
-        <!-- CTAs -->
-        <div class="flex flex-wrap items-center gap-3 mb-16">
-          <a href="#experience" class="btn btn-primary px-6 py-3 text-sm">
-            View Experience
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </a>
-          <a href="resume.html" target="_blank" rel="noopener" class="btn btn-secondary px-6 py-3 text-sm">
-            View Résumé
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-            </svg>
-          </a>
-          <a href="RESUME.pdf" download class="btn btn-ghost px-5 py-3 text-sm">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-            </svg>
-            Download PDF
-          </a>
-        </div>
-
-        <!-- Hero stats bar -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-7 pt-8 border-t border-zinc-800/70">
-          <div>
-            <div class="stat-num">2M+</div>
-            <div class="stat-label">Platform users</div>
-          </div>
-          <div>
-            <div class="stat-num">31</div>
-            <div class="stat-label">Services owned</div>
-          </div>
-          <div>
-            <div class="stat-num">20</div>
-            <div class="stat-label">Engineers led</div>
-          </div>
-          <div>
-            <div class="stat-num">8×</div>
-            <div class="stat-label">Production scale-up</div>
-          </div>
-        </div>
-
+<!-- ═══ ALSO — open source · toolbox · education ═══ -->
+<section class="section" id="more">
+  <div class="wrap">
+    <p class="label">Also</p>
+    <div class="more">
+      <div>
+        <h3>Open source</h3>
+        <ul>
+          <li><a class="t" href="https://github.com/SaeedSaedi/sms-sender" target="_blank" rel="noopener">sms-sender <small>Python</small></a><p class="d">Fault-tolerant bulk SMS CLI — idempotent, crash-resumable runs backed by a SQLite state machine.</p></li>
+          <li><a class="t" href="https://github.com/SaeedSaedi/dotfiles" target="_blank" rel="noopener">dotfiles <small>Shell</small></a><p class="d">One script provisions Neovim, tmux, Zsh and VS Code on macOS and Ubuntu.</p></li>
+          <li><a class="t" href="https://github.com/SaeedSaedi" target="_blank" rel="noopener">github.com/SaeedSaedi <small>→</small></a></li>
+        </ul>
       </div>
-    </div>
-
-    <!-- Scroll hint -->
-    <div class="scroll-indicator hidden md:block" aria-hidden="true">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
-      </svg>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════════
-       ABOUT
-       ══════════════════════════════════════════════ -->
-  <section id="about" class="py-16 md:py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-
-      <!-- Section header -->
-      <div class="fade-in mb-12">
-        <div class="section-head">
-          <span class="section-index">01 — About</span>
-          <span class="section-rule"></span>
-        </div>
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
-          The engineer who learned<br class="hidden md:block" />
-          to think in products
-        </h2>
+      <div>
+        <h3>Toolbox</h3>
+        <ul>
+          <li><p class="t">Product</p><p class="d">Roadmapping, sprint planning, stakeholder management, OKRs/KPIs, product analytics, user research, Agile/Scrum</p></li>
+          <li><p class="t">Engineering</p><p class="d">Microservices, Python/FastAPI, PHP/Laravel, Go, Node.js, REST APIs</p></li>
+          <li><p class="t">Data &amp; infrastructure</p><p class="d">PostgreSQL, ClickHouse, MySQL, Redis, NATS, Docker, CI/CD</p></li>
+        </ul>
       </div>
-
-      <!-- Photo + Bio -->
-      <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-start mb-14">
-
-        <!-- Profile photo -->
-        <div class="fade-in flex-shrink-0">
-          <img src="assets/saeed-saedi.webp"
-               alt="Saeed Saedi"
-               width="180" height="180"
-               class="profile-photo"
-               loading="lazy"
-               decoding="async" />
-        </div>
-
-        <!-- Bio text -->
-        <div class="fade-in max-w-2xl">
-          <p class="text-zinc-300 text-lg leading-relaxed mb-4">
-            13+ years spanning engineering, operations, and product leadership. I've built
-            full-stack platforms, scaled a factory floor from 3K to 25,000 units/month, and
-            now own product and delivery for a cryptocurrency exchange serving 2M users.
-            Each role sharpened a different edge: technical depth, operational discipline,
-            and the product instinct to ship what matters.
-          </p>
-          <p class="text-zinc-400 text-lg leading-relaxed">
-            At Kifpool.me, I own the roadmap for 31 microservices and lead a 20-engineer
-            team at 95%+ on-time delivery. I translate executive strategy into sprint-level
-            execution — and I'm measured by what ships, not what's planned.
-          </p>
-        </div>
-      </div>
-
-      <!-- Metric cards -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="card card--compact fade-in">
-          <div class="metric-num">+40%</div>
-          <div class="text-sm font-medium text-zinc-200 mb-0.5">Efficiency gain</div>
-          <div class="text-xs text-dim mono">Manufacturing operations</div>
-        </div>
-        <div class="card card--compact fade-in">
-          <div class="metric-num">−26%</div>
-          <div class="text-sm font-medium text-zinc-200 mb-0.5">Waste reduced</div>
-          <div class="text-xs text-dim mono">Cross-shift process redesign</div>
-        </div>
-        <div class="card card--compact fade-in">
-          <div class="metric-num">5K</div>
-          <div class="text-sm font-medium text-zinc-200 mb-0.5">Daily transactions</div>
-          <div class="text-xs text-dim mono">Crypto exchange platform</div>
-        </div>
-        <div class="card card--compact fade-in">
-          <div class="metric-num">2×</div>
-          <div class="text-sm font-medium text-zinc-200 mb-0.5">Promoted in 6 months</div>
-          <div class="text-xs text-dim mono">Dev → Scrum Master → TPM</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════════
-       HOW I WORK
-       ══════════════════════════════════════════════ -->
-  <section class="py-16 md:py-20 px-6 border-t border-zinc-800/50">
-    <div class="max-w-6xl mx-auto">
-
-      <div class="fade-in mb-12">
-        <div class="section-head">
-          <span class="section-index">02 — Approach</span>
-          <span class="section-rule"></span>
-        </div>
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">How I Work</h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <div class="fade-in card">
-          <div class="skill-icon">
-            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-            </svg>
-          </div>
-          <h3 class="text-base font-semibold text-white mb-2">Product Strategy</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">
-            Translate C-suite strategy into sprint-level roadmaps. Prioritize ruthlessly,
-            define success metrics up front, and measure what ships.
-          </p>
-        </div>
-
-        <div class="fade-in card">
-          <div class="skill-icon">
-            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-base font-semibold text-white mb-2">Technical Execution</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">
-            Own delivery across 31 microservices. Redesigned sprint execution to service-level
-            ownership — cutting cross-team blockers 30% and improving release predictability.
-          </p>
-        </div>
-
-        <div class="fade-in card">
-          <div class="skill-icon">
-            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-base font-semibold text-white mb-2">Team Leadership</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">
-            Lead 20 engineers across backend, infrastructure, and blockchain squads at
-            95%+ on-time delivery. Remove blockers before they become misses.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════════
-       EXPERIENCE
-       ══════════════════════════════════════════════ -->
-  <section id="experience" class="py-16 md:py-24 px-6 border-y border-zinc-800/50 bg-zinc-900/20">
-    <div class="max-w-6xl mx-auto">
-
-      <div class="fade-in mb-16">
-        <div class="section-head">
-          <span class="section-index">03 — Experience</span>
-          <span class="section-rule"></span>
-        </div>
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Career History</h2>
-      </div>
-
-      <!-- Timeline wrapper -->
-      <div class="relative">
-
-        <!-- Vertical connector line (desktop only) -->
-        <div class="absolute left-5 top-5 bottom-5 w-px bg-gradient-to-b from-indigo-700 via-zinc-700 to-transparent hidden sm:block"
-             aria-hidden="true"></div>
-
-        <div class="space-y-8">
-
-          <!-- ── Role 1 · Technical Product Manager · Kifpool.me ── -->
-          <div class="fade-in relative sm:pl-16">
-
-            <!-- Timeline dot -->
-            <div class="timeline-dot timeline-dot--active hidden sm:flex">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2
-                     M9 5a2 2 0 002 2h2a2 2 0 002-2
-                     M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-              </svg>
-            </div>
-
-            <div class="card">
-              <!-- Card header -->
-              <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
-                <div>
-                  <h3 class="text-xl font-bold text-white">Technical Product Manager</h3>
-                  <div class="flex flex-wrap items-center gap-2 mt-1">
-                    <span class="text-indigo-400 font-semibold">Kifpool.me</span>
-                    <span class="text-dim">·</span>
-                    <span class="text-dim text-sm">Cryptocurrency Exchange</span>
-                  </div>
-                  <!-- Promotion track -->
-                  <div class="promo-track">
-                    <span class="promo-step">Developer</span>
-                    <span class="promo-arrow">→</span>
-                    <span class="promo-step">Scrum Master</span>
-                    <span class="promo-arrow">→</span>
-                    <span class="promo-step promo-step--active">Technical PM</span>
-                  </div>
-                </div>
-                <div class="flex flex-col items-start sm:items-end gap-1.5 flex-shrink-0">
-                  <span class="badge-current">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span>
-                    Current Role
-                  </span>
-                  <span class="meta-mono">Sep 2024 – Present</span>
-                </div>
-              </div>
-
-              <!-- Bullets -->
-              <ul class="space-y-3 mt-6 mb-6 max-w-prose">
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-indigo-400 flex-shrink-0 mt-0.5">→</span>
-                  <span>Own end-to-end product roadmap and delivery across
-                    <strong class="text-zinc-200 font-medium">31 microservices</strong> (exchange
-                    engine, order management, pricing, blockchain integrations), sustaining
-                    <strong class="text-zinc-200 font-medium">95%+ on-time delivery</strong> for a
-                    <strong class="text-zinc-200 font-medium">2M-user</strong> platform</span>
-                </li>
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-indigo-400 flex-shrink-0 mt-0.5">→</span>
-                  <span>Lead a <strong class="text-zinc-200 font-medium">20-engineer cross-functional
-                    team</strong> spanning backend, infrastructure, and blockchain squads; earned
-                    <strong class="text-zinc-200 font-medium">2 promotions in under 6 months</strong>
-                    (Developer → Scrum Master → TPM)</span>
-                </li>
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-indigo-400 flex-shrink-0 mt-0.5">→</span>
-                  <span>Redesigned sprint execution from monolithic planning to service-level
-                    ownership, <strong class="text-zinc-200 font-medium">cutting cross-team
-                    dependency blockers 30%</strong> and improving release predictability</span>
-                </li>
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-indigo-400 flex-shrink-0 mt-0.5">→</span>
-                  <span>Built and shipped an org-wide delivery tracking framework, giving C-suite
-                    <strong class="text-zinc-200 font-medium">real-time visibility</strong> into
-                    velocity, risk, and release confidence across all 31 services</span>
-                </li>
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-indigo-400 flex-shrink-0 mt-0.5">→</span>
-                  <span>Translate executive strategy into sprint-level execution plans for a FinTech
-                    platform processing <strong class="text-zinc-200 font-medium">~5,000 daily
-                    transactions</strong> across trading, custody, and settlement</span>
-                </li>
-              </ul>
-
-              <!-- Tech tags -->
-              <div class="flex flex-wrap gap-2">
-                <span class="tag">Laravel</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">Go</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">ClickHouse</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">NATS</span>
-                <span class="tag">Docker</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── Role 2 · Production Manager · Toosalem ── -->
-          <div class="fade-in relative sm:pl-16">
-
-            <div class="timeline-dot timeline-dot--past hidden sm:flex">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5
-                     M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
-            </div>
-
-            <div class="card">
-              <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
-                <div>
-                  <h3 class="text-xl font-bold text-white">Production Manager</h3>
-                  <div class="flex flex-wrap items-center gap-2 mt-1">
-                    <span class="text-zinc-200 font-semibold">Toosalem Industrial</span>
-                    <span class="text-dim">·</span>
-                    <span class="text-dim text-sm">Automotive Manufacturing</span>
-                  </div>
-                </div>
-                <div class="sm:text-right flex-shrink-0">
-                  <div class="meta-mono">Feb 2019 – Sep 2024</div>
-                  <div class="meta-mono text-dim mt-0.5">5+ years</div>
-                </div>
-              </div>
-
-              <ul class="space-y-3 mb-6 max-w-prose">
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
-                  <span>Scaled production output <strong class="text-zinc-200 font-medium">8×</strong>
-                    (3,000 → 25,000 units/month) by designing a new production line, restructuring
-                    shift operations, and optimizing end-to-end throughput</span>
-                </li>
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
-                  <span>Drove <strong class="text-zinc-200 font-medium">40% efficiency gain</strong>
-                    across 3 shifts and ~80 personnel through process reengineering and cross-department
-                    coordination (Engineering, Foundry, HR, Supply Chain)</span>
-                </li>
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
-                  <span>Reduced material waste <strong class="text-zinc-200 font-medium">26%</strong>
-                    and unplanned downtime <strong class="text-zinc-200 font-medium">18%</strong>
-                    via data-driven root-cause analysis and preventive maintenance programs</span>
-                </li>
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
-                  <span>Built and deployed <strong class="text-zinc-200 font-medium">2 internal
-                    software systems</strong> (Packaging Management, Maintenance Management) serving
-                    21 users, replacing manual tracking and improving KPI reporting accuracy</span>
-                </li>
-              </ul>
-
-              <div class="flex flex-wrap gap-2">
-                <span class="tag">Operations Management</span>
-                <span class="tag">Process Optimization</span>
-                <span class="tag">Team Leadership</span>
-                <span class="tag">Internal Tooling</span>
-                <span class="tag">KPI Tracking</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── Role 3 · Co-Founder · GoldenTech / Chikhoobe ── -->
-          <div class="fade-in relative sm:pl-16">
-
-            <div class="timeline-dot timeline-dot--old hidden sm:flex">
-              <svg class="w-4 h-4 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-
-            <div class="card">
-              <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
-                <div>
-                  <h3 class="text-xl font-bold text-white">Co-Founder &amp; Developer</h3>
-                  <div class="flex flex-wrap items-center gap-2 mt-1">
-                    <span class="text-zinc-200 font-semibold">GoldenTech</span>
-                    <span class="text-dim">·</span>
-                    <span class="text-dim text-sm">Chikhoobe Platform · Startup</span>
-                  </div>
-                </div>
-                <div class="meta-mono flex-shrink-0">2011</div>
-              </div>
-
-              <ul class="space-y-3 mb-6 max-w-prose">
-                <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
-                  <span>Co-founded a data collection startup; designed and built the full-stack
-                    platform, led product ideation through early-stage validation and product-market
-                    fit discovery</span>
-                </li>
-              </ul>
-
-              <div class="flex flex-wrap gap-2">
-                <span class="tag">Product Ideation</span>
-                <span class="tag">Full-stack Development</span>
-                <span class="tag">Early-stage Startup</span>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
+      <div>
+        <h3>Education</h3>
+        <ul>
+          <li><p class="t">BSc, Industrial Management <small>2011–15</small></p><p class="d">Imam Reza International University</p></li>
+          <li><p class="t">Product Management Program</p><p class="d"><a class="link" href="https://bozhan.school/courses/productmanagement/" target="_blank" rel="noopener">Bozhan School</a> — strategy, user research, development, analytics</p></li>
+          <li><p class="t">Languages</p><p class="d">English (upper-intermediate) · Persian (native)</p></li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-
-  <!-- ══════════════════════════════════════════════
-       PROJECTS
-       ══════════════════════════════════════════════ -->
-  <section id="projects" class="py-16 md:py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-
-      <div class="fade-in mb-14">
-        <div class="section-head">
-          <span class="section-index">04 — Projects</span>
-          <span class="section-rule"></span>
-        </div>
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Selected Work</h2>
-        <p class="mt-4 max-w-2xl text-zinc-400 leading-relaxed">Open-source tooling I build and maintain. Documented, licensed and tagged &mdash; not demos.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <a href="https://github.com/SaeedSaedi/sms-sender" target="_blank" rel="noopener"
-           class="card fade-in group block">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">sms-sender</h3>
-            <span class="meta-mono text-xs text-dim">Python</span>
-          </div>
-          <p class="text-sm text-zinc-400 leading-relaxed mb-4">Fault-tolerant bulk SMS CLI for Kavenegar. A SQLite state machine keeps every run idempotent and crash-resumable, and separates permanent failures from retriable ones.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag">Idempotency</span>
-            <span class="tag">Fault tolerance</span>
-            <span class="tag">Rate limiting</span>
-          </div>
-          <div class="mt-5 meta-mono text-xs text-dim group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
-        </a>
-
-        <a href="https://github.com/SaeedSaedi/dotfiles" target="_blank" rel="noopener"
-           class="card fade-in group block">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">dotfiles</h3>
-            <span class="meta-mono text-xs text-dim">Shell</span>
-          </div>
-          <p class="text-sm text-zinc-400 leading-relaxed mb-4">Cross-platform development environment. One script provisions Neovim, tmux, Zsh and VS Code on macOS and Ubuntu, with smoke tests and local overrides.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag">Automation</span>
-            <span class="tag">Reproducibility</span>
-            <span class="tag">macOS / Linux</span>
-          </div>
-          <div class="mt-5 meta-mono text-xs text-dim group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
-        </a>
-
-        <a href="https://github.com/SaeedSaedi/saeedsaedi.github.io" target="_blank" rel="noopener"
-           class="card fade-in group block">
-          <div class="flex items-start justify-between gap-3 mb-3">
-            <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">saeedsaedi.github.io</h3>
-            <span class="meta-mono text-xs text-dim">HTML</span>
-          </div>
-          <p class="text-sm text-zinc-400 leading-relaxed mb-4">This site. Single page, no framework &mdash; precompiled Tailwind, vanilla JavaScript and self-hosted fonts, with zero third-party requests. Deployed straight from main.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag">Tailwind</span>
-            <span class="tag">Vanilla JS</span>
-            <span class="tag">GitHub Pages</span>
-          </div>
-          <div class="mt-5 meta-mono text-xs text-dim group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
-        </a>
-
-      </div>
-
-      <p class="fade-in mt-10 text-sm text-dim">Everything else lives at
-        <a href="https://github.com/SaeedSaedi" target="_blank" rel="noopener"
-           class="text-indigo-400 hover:text-indigo-300 underline decoration-indigo-400/40 underline-offset-4 hover:decoration-indigo-300 transition-colors">github.com/SaeedSaedi</a>.</p>
-
+<!-- ═══ CONTACT ═══ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="label">Contact</p>
+    <h2 class="h2">Let’s talk.</h2>
+    <p class="intro">Open to Technical PM and product leadership roles, and to good conversations about shipping software at scale.</p>
+    <div class="contact__actions">
+      <a class="btn btn--primary" href="mailto:saeed.saedi.s@gmail.com">saeed.saedi.s@gmail.com</a>
+      <a class="btn btn--ghost" href="RESUME.pdf" download>Download résumé (PDF)</a>
     </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       SKILLS
-       ══════════════════════════════════════════════ -->
-  <section id="skills" class="py-16 md:py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-
-      <div class="fade-in mb-14">
-        <div class="section-head">
-          <span class="section-index">05 — Skills</span>
-          <span class="section-rule"></span>
-        </div>
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Core Competencies</h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Product & Leadership -->
-        <div class="fade-in card">
-          <div class="skill-icon">
-            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-            </svg>
-          </div>
-          <h3 class="mono text-xs font-semibold text-cyan-300/90 uppercase tracking-[0.12em] mb-4">
-            Product &amp; Leadership
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-pill skill-pill--accent">Technical PM</span>
-            <span class="skill-pill">Agile / Scrum</span>
-            <span class="skill-pill">Product Roadmapping</span>
-            <span class="skill-pill">Sprint Planning</span>
-            <span class="skill-pill">Cross-team Leadership</span>
-            <span class="skill-pill">Stakeholder Management</span>
-            <span class="skill-pill">Product Analytics</span>
-            <span class="skill-pill">User Research</span>
-            <span class="skill-pill">OKRs / KPIs</span>
-          </div>
-        </div>
-
-        <!-- Backend & Architecture -->
-        <div class="fade-in card">
-          <div class="skill-icon">
-            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="mono text-xs font-semibold text-cyan-300/90 uppercase tracking-[0.12em] mb-4">
-            Backend &amp; Architecture
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-pill skill-pill--accent">Microservices</span>
-            <span class="skill-pill">Python / FastAPI</span>
-            <span class="skill-pill">PHP / Laravel</span>
-            <span class="skill-pill">Go</span>
-            <span class="skill-pill">Node.js</span>
-            <span class="skill-pill">Django</span>
-            <span class="skill-pill">REST APIs</span>
-            <span class="skill-pill">Async Programming</span>
-          </div>
-        </div>
-
-        <!-- Infrastructure & Data -->
-        <div class="fade-in card">
-          <div class="skill-icon">
-            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2
-                   M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2
-                   m-2-4h.01M17 16h.01"/>
-            </svg>
-          </div>
-          <h3 class="mono text-xs font-semibold text-cyan-300/90 uppercase tracking-[0.12em] mb-4">
-            Infrastructure &amp; Data
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-pill skill-pill--accent">Docker</span>
-            <span class="skill-pill">Git / GitHub / GitLab</span>
-            <span class="skill-pill">Redis</span>
-            <span class="skill-pill">NATS</span>
-            <span class="skill-pill">CI/CD Pipelines</span>
-            <span class="skill-pill">PostgreSQL</span>
-            <span class="skill-pill">MySQL</span>
-            <span class="skill-pill">ClickHouse</span>
-          </div>
-        </div>
-
-      </div>
+    <div class="contact__links">
+      <a href="https://www.linkedin.com/in/saeedsaedi/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/SaeedSaedi" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://t.me/SaeedSaedi" target="_blank" rel="noopener">Telegram ↗</a>
     </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════════════════
-       EDUCATION
-       ══════════════════════════════════════════════ -->
-  <section class="py-12 md:py-16 px-6 border-t border-zinc-800/50">
-    <div class="max-w-6xl mx-auto">
-      <div class="fade-in flex flex-wrap items-center justify-between gap-8">
-        <div class="flex flex-col gap-6 flex-1">
-          <!-- Degree -->
-          <div>
-            <div class="section-head mb-4">
-              <span class="section-index">06 — Education</span>
-            </div>
-            <h3 class="text-2xl font-bold text-white">
-              Bachelor of Science, Industrial Management
-            </h3>
-            <p class="text-dim mt-1.5">
-              Imam Reza International University &nbsp;<span class="mono text-dim">·</span>&nbsp;
-              <span class="meta-mono">2011 – 2015</span>
-            </p>
-          </div>
-          <!-- Professional Development -->
-          <div>
-            <h3 class="text-lg font-semibold text-white">
-              Product Management Program
-            </h3>
-            <p class="text-dim mt-1">
-              <a href="https://bozhan.school/courses/productmanagement/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="text-indigo-400 hover:text-indigo-300 underline decoration-indigo-400/40 underline-offset-4 hover:decoration-indigo-300 transition-colors">Bozhan School</a>
-              &nbsp;·&nbsp; Product Strategy, User Research, Product Development, Marketing &amp; Analytics
-            </p>
-          </div>
-        </div>
-        <div class="border border-zinc-800 rounded-xl px-6 py-4 text-center">
-          <div class="text-base font-semibold text-zinc-200">English</div>
-          <div class="text-sm text-dim mt-0.5">Upper-Intermediate</div>
-        </div>
-      </div>
+    <div class="contact__me">
+      <img src="assets/saeed-saedi.webp" width="56" height="56" alt="Saeed Saedi" loading="lazy" decoding="async" />
+      <p>Mashhad, Iran · UTC+3:30 · Open to relocation and remote work</p>
     </div>
-  </section>
+  </div>
+</section>
 
+</main>
 
-  <!-- ══════════════════════════════════════════════
-       CONTACT
-       ══════════════════════════════════════════════ -->
-  <section id="contact" class="py-20 md:py-28 px-6 border-t border-zinc-800/50 bg-zinc-900/20">
-    <div class="max-w-6xl mx-auto">
-      <div class="fade-in max-w-2xl mx-auto text-center">
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Saeed Saedi</span>
+    <span>Hand-built — HTML and CSS, no frameworks · <a href="https://github.com/SaeedSaedi/saeedsaedi.github.io" target="_blank" rel="noopener">Source ↗</a></span>
+  </div>
+</footer>
 
-        <div class="section-index mb-4">07 — Contact</div>
-        <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 leading-[1.05]">
-          Let's work together
-        </h2>
-        <p class="text-zinc-400 text-lg mb-10 leading-relaxed">
-          Open to TPM roles, product leadership positions, and interesting conversations
-          about building software at scale.
-        </p>
-
-        <!-- Primary CTA -->
-        <a href="mailto:saeed.saedi.s@gmail.com"
-           class="btn btn-primary px-7 py-3.5 text-base inline-flex mb-8">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          saeed.saedi.s@gmail.com
-        </a>
-
-        <!-- Social links -->
-        <div class="flex flex-wrap justify-center gap-3 mb-8">
-          <a href="resume.html" target="_blank" rel="noopener"
-             class="btn btn-ghost px-5 py-2.5 text-sm">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
-            Résumé
-          </a>
-          <a href="https://www.linkedin.com/in/saeedsaedi/"
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn-ghost px-5 py-2.5 text-sm">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-            LinkedIn
-          </a>
-          <a href="https://github.com/SaeedSaedi"
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn-ghost px-5 py-2.5 text-sm">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-            </svg>
-            GitHub
-          </a>
-          <a href="https://t.me/SaeedSaedi"
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn-ghost px-5 py-2.5 text-sm">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-            </svg>
-            Telegram
-          </a>
-        </div>
-
-        <p class="text-dim text-sm">📍 Mashhad, Iran &nbsp;·&nbsp; Open to relocation and remote opportunities worldwide</p>
-      </div>
-    </div>
-  </section>
-
-  </main>
-
-  <!-- ══════════════════════════════════════════════
-       FOOTER
-       ══════════════════════════════════════════════ -->
-  <footer class="py-8 px-6 border-t border-zinc-800/40">
-    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
-      <p class="text-dim text-sm">© <span id="year">2026</span> Saeed Saedi</p>
-      <p class="mono text-dim text-xs">HTML &amp; Tailwind · GitHub Pages</p>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>

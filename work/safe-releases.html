@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="serif">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Releases that protect people’s money — Saeed Saedi</title>
+  <meta name="description" content="On an exchange, a bad release can touch people’s money. I made rollout plans, rollback paths and monitoring a standard part of shipping anything that touches financial data." />
+  <link rel="canonical" href="https://saeedsaedi.github.io/work/safe-releases.html" />
+  <meta property="og:title" content="Releases that protect people’s money — Saeed Saedi" />
+  <meta property="og:description" content="On an exchange, a bad release can touch people’s money. I made rollout plans, rollback paths and monitoring a standard part of shipping anything that touches financial data." />
+  <meta property="og:image" content="https://saeedsaedi.github.io/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://saeedsaedi.github.io/work/safe-releases.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">SS</span>Saeed Saedi</a>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+      <a href="../#work">Work</a>
+      <a href="../#path">Path</a>
+      <a href="../#experience">Experience</a>
+      <a href="../resume.html" target="_blank" rel="noopener">Résumé ↗</a>
+    </nav>
+    <a class="btn btn--ghost btn--sm" href="../#contact">Get in touch</a>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </div>
+</header>
+
+<main class="cs">
+  <article>
+    <div class="wrap">
+      <a class="cs__back" href="../#work">← All work</a>
+      <p class="eyebrow">Case study · Kifpool.me · Reliability</p>
+      <h1 class="cs__title">Releases that protect people’s money</h1>
+      <p class="lead cs__lead">Crypto markets move fast, and the busiest moments are exactly when an exchange can least afford a broken release. I made release plans, staged rollouts, rollback paths and monitoring a standard part of shipping anything that touches financial data.</p>
+      <dl class="glance">
+        <div><dt>Role</dt><dd>Technical Product Manager</dd></div>
+        <div><dt>Applies to</dt><dd>Changes that touch financial data</dd></div>
+        <div><dt>Practice</dt><dd>Flags, staged rollouts, runbooks</dd></div>
+        <div><dt>Standard</dt><dd>Rollback path before launch</dd></div>
+      </dl>
+    </div>
+
+    <figure class="wrap cs__figure">
+      <div class="frame">
+        <svg viewBox="0 0 520 300" role="img" aria-label="Illustrative staged rollout: internal accounts first, then a small share of users, a larger share and everyone, with a tested kill switch and a rollback threshold set before launch.">
+  <rect x="0.5" y="0.5" width="519" height="299" rx="12" fill="#0d0d10" stroke="#26262b"/>
+  <g fill="#2c2c33"><circle cx="18" cy="18" r="4"/><circle cx="32" cy="18" r="4"/><circle cx="46" cy="18" r="4"/></g>
+  <text x="64" y="22" class="dg-small">release plan · touches money</text>
+  <text x="424" y="22" text-anchor="end" class="dg-small">kill switch</text>
+  <rect x="432" y="10" width="30" height="16" rx="8" fill="rgba(52,211,153,.16)" stroke="rgba(52,211,153,.6)"/>
+  <circle cx="453" cy="18" r="5" fill="#34d399"/>
+  <text x="470" y="22" class="dg-small" style="fill:#34d399">TESTED</text>
+  <line x1="0.5" y1="36" x2="519.5" y2="36" stroke="#1e1e23"/>
+  <text x="20" y="60" class="dg-small">1 INTERNAL</text><text x="144" y="60" class="dg-small">2 SMALL SHARE</text>
+  <text x="268" y="60" class="dg-small">3 LARGER SHARE</text><text x="392" y="60" class="dg-small">4 EVERYONE</text>
+  <g fill="#1e1e23"><rect x="20" y="70" width="108" height="8" rx="4"/><rect x="144" y="70" width="108" height="8" rx="4"/><rect x="268" y="70" width="108" height="8" rx="4"/><rect x="392" y="70" width="108" height="8" rx="4"/></g>
+  <rect x="20" y="70" width="8" height="8" rx="4" fill="#818cf8"/><rect x="144" y="70" width="20" height="8" rx="4" fill="#818cf8"/>
+  <rect x="268" y="70" width="50" height="8" rx="4" fill="#818cf8"/><rect x="392" y="70" width="108" height="8" rx="4" fill="#22d3ee"/>
+  <text x="20" y="110" class="dg-small">ERROR RATE</text>
+  <text x="500" y="122" text-anchor="end" class="dg-small" style="fill:#fbbf24">ROLLBACK IF CROSSED</text>
+  <line x1="20" y1="130" x2="500" y2="130" stroke="#fbbf24" stroke-dasharray="5 5" opacity=".75"/>
+  <g stroke="#26262c" stroke-dasharray="2 4"><line x1="136" y1="96" x2="136" y2="226"/><line x1="260" y1="96" x2="260" y2="226"/><line x1="384" y1="96" x2="384" y2="226"/></g>
+  <line x1="20" y1="226" x2="500" y2="226" stroke="#2b2b31"/>
+  <polyline points="20,206 60,203 100,208 136,200 172,205 212,198 260,203 300,197 340,204 384,199 424,203 462,196 500,200" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-linejoin="round"/>
+  <rect x="20" y="248" width="62" height="24" rx="7" fill="#121215" stroke="#2b2b31"/><path d="M30 260 l3 3 l6 -6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="44" y="264" class="dg-small" style="fill:#a1a1aa">logs</text><rect x="90" y="248" width="82" height="24" rx="7" fill="#121215" stroke="#2b2b31"/><path d="M100 260 l3 3 l6 -6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="114" y="264" class="dg-small" style="fill:#a1a1aa">metrics</text><rect x="180" y="248" width="75" height="24" rx="7" fill="#121215" stroke="#2b2b31"/><path d="M190 260 l3 3 l6 -6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="204" y="264" class="dg-small" style="fill:#a1a1aa">alerts</text><rect x="263" y="248" width="82" height="24" rx="7" fill="#121215" stroke="#2b2b31"/><path d="M273 260 l3 3 l6 -6" fill="none" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="287" y="264" class="dg-small" style="fill:#a1a1aa">runbook</text>
+  <text x="500" y="266" text-anchor="end" class="dg-sub" font-style="italic">illustrative</text>
+</svg>
+      </div>
+      <figcaption>A staged rollout with a tested kill switch and a rollback threshold agreed before launch. Illustrative.</figcaption>
+    </figure>
+
+    <div class="wrap cs__body">
+      <nav class="toc" aria-label="On this page">
+        <b>On this page</b>
+        <a href="#situation">The situation</a>
+        <a href="#problem">The problem</a>
+        <a href="#did">What I did</a>
+        <a href="#results">Results</a>
+        <a href="#learned">What I learned</a>
+      </nav>
+      <div class="prose">
+        <h2 id="situation">The situation</h2>
+        <p>Kifpool.me handles thousands of transactions a day across trading, custody and settlement, and crypto prices can move sharply within minutes. Users expect the app to work best exactly when the market is busiest.</p>
+
+        <h2 id="problem">The problem</h2>
+        <p>Speed and safety pull in opposite directions. The team ships every two weeks, and some of those changes touch balances, orders or prices. A release that goes wrong at the wrong moment costs users money and trust, and trust is hard to win back.</p>
+
+        <h2 id="did">What I did</h2>
+        <ul class="did">
+          <li><strong>A release plan for anything that touches financial data:</strong> what changes, how it rolls out, what success looks like, and the exact conditions for rolling back.</li>
+          <li><strong>Feature flags and staged rollouts.</strong> New behaviour reaches internal accounts first, then a growing share of users, then everyone. The kill switch is tested before launch, not during an incident.</li>
+          <li><strong>Nothing ships blind.</strong> Before a new service reaches production it needs structured logs, at least four key metrics, two alert rules and a basic runbook.</li>
+          <li><strong>A second look where it matters.</strong> Changes to financial logic or concurrent operations get a focused review, instead of treating every pull request the same.</li>
+          <li><strong>Blameless postmortems within 48 hours</strong> of a serious incident, with action items that feed straight into the risk register.</li>
+        </ul>
+        <blockquote class="pull">“Facts first, cause second, prevention third.”</blockquote>
+
+        <h2 id="results">Results</h2>
+        <div class="results">
+          <div><b class="word">Staged</b><span>rollouts for changes that touch money</span></div>
+          <div><b>4 + 2</b><span>key metrics and alert rules before a new service ships</span></div>
+          <div><b>48 h</b><span>to a blameless postmortem after a serious incident</span></div>
+        </div>
+
+        <h2 id="learned">What I learned</h2>
+        <p>Reliability is a product feature. Users never see the release plan, but they feel it on the days the market is busiest.</p>
+      </div>
+    </div>
+
+    <nav class="wrap cs__next" aria-label="Next case study">
+      <small>Next case study</small>
+      <a href="production-line.html">Scaling a production line 8× →</a>
+    </nav>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Saeed Saedi</span>
+    <span>Hand-built — HTML and CSS, no frameworks · <a href="https://github.com/SaeedSaedi/saeedsaedi.github.io" target="_blank" rel="noopener">Source ↗</a></span>
+  </div>
+</footer>
+
+<script src="../script.js" defer></script>
+</body>
+</html>

@@ -2,92 +2,66 @@
  * script.js — saeedsaedi.github.io
  *
  * Responsibilities:
- *  1. Mobile navigation menu toggle
- *  2. Scroll-triggered fade-in animations (IntersectionObserver)
- *  3. Active nav-link highlighting on scroll
+ *  1. Mobile menu toggle (closes on link click and on Escape)
+ *  2. Active nav link while scrolling the home page
+ *  3. Footer year
+ *
+ * Everything works without this file: on small screens the nav links
+ * simply stay visible (the .js class is set inline in <head>).
  */
 
 (function () {
   'use strict';
 
   /* ── 1. Mobile menu ─────────────────────────────── */
-  var mobileBtn  = document.getElementById('mobile-btn');
-  var mobileMenu = document.getElementById('mobile-menu');
-  var iconOpen   = document.getElementById('icon-open');
-  var iconClose  = document.getElementById('icon-close');
+  var nav = document.querySelector('.nav');
+  var menuBtn = document.querySelector('.nav__menu');
 
-  if (mobileBtn && mobileMenu) {
-    mobileBtn.addEventListener('click', function () {
-      var isOpen = !mobileMenu.classList.contains('hidden');
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+  }
 
-      mobileMenu.classList.toggle('hidden', isOpen);
-      iconOpen.classList.toggle('hidden', !isOpen);
-      iconClose.classList.toggle('hidden', isOpen);
-      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+  if (nav && menuBtn) {
+    menuBtn.addEventListener('click', function () {
+      setMenu(!nav.classList.contains('is-open'));
     });
-
-    /* Close menu when any link inside is clicked */
-    mobileMenu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mobileMenu.classList.add('hidden');
-        iconOpen.classList.remove('hidden');
-        iconClose.classList.add('hidden');
-        mobileBtn.setAttribute('aria-expanded', 'false');
-      });
+    nav.querySelectorAll('.nav__links a').forEach(function (link) {
+      link.addEventListener('click', function () { setMenu(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        setMenu(false);
+        menuBtn.focus();
+      }
     });
   }
 
-  /* ── 2. Scroll-triggered fade-in ────────────────── */
-  var fadeEls = document.querySelectorAll('.fade-in');
-
-  if (fadeEls.length) {
-    if ('IntersectionObserver' in window) {
-      var fadeObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry, i) {
-          if (entry.isIntersecting) {
-            /* Stagger siblings that enter in the same batch */
-            setTimeout(function () {
-              entry.target.classList.add('visible');
-            }, i * 70);
-            fadeObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-      fadeEls.forEach(function (el) { fadeObserver.observe(el); });
-    } else {
-      /* Fallback: show immediately for browsers without IntersectionObserver */
-      fadeEls.forEach(function (el) { el.classList.add('visible'); });
-    }
-  }
-
-  /* ── 3. Active nav link on scroll ───────────────── */
+  /* ── 2. Active nav link on scroll ───────────────── */
   /* A section is "current" while it crosses a thin band just above the middle
-     of the viewport — works for sections taller than the screen, too. The hero
-     (#top) has no nav link, so scrolling back up clears the highlight. */
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('nav a.nav-link');
+     of the viewport. Sections without a nav link (the hero, How I work, …)
+     clear the highlight. */
+  var links = document.querySelectorAll('.nav__links a[href^="#"]');
+  var sections = document.querySelectorAll('main section[id]');
 
-  if (sections.length && navLinks.length && 'IntersectionObserver' in window) {
-    var navObserver = new IntersectionObserver(function (entries) {
+  if (links.length && sections.length && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var id = entry.target.getAttribute('id');
-          navLinks.forEach(function (link) {
-            var isActive = link.getAttribute('href') === '#' + id;
-            link.classList.toggle('active', isActive);
-            link.classList.toggle('text-white', isActive);
-            link.classList.toggle('text-zinc-400', !isActive);
-          });
-        }
+        if (!entry.isIntersecting) return;
+        var id = '#' + entry.target.id;
+        links.forEach(function (link) {
+          var active = link.getAttribute('href') === id;
+          link.classList.toggle('is-active', active);
+          if (active) link.setAttribute('aria-current', 'true');
+          else link.removeAttribute('aria-current');
+        });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
 
-    sections.forEach(function (section) { navObserver.observe(section); });
+    sections.forEach(function (section) { observer.observe(section); });
   }
 
-  /* ── 4. Dynamic footer year ─────────────────────── */
+  /* ── 3. Footer year ─────────────────────────────── */
   var yearEl = document.getElementById('year');
   if (yearEl) { yearEl.textContent = String(new Date().getFullYear()); }
-
 })();

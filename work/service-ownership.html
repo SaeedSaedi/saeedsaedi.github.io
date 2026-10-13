@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="serif">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From one sprint plan to service ownership — Saeed Saedi</title>
+  <meta name="description" content="Delivery for 31 microservices ran on one shared sprint plan, so cross-team dependencies kept surfacing mid-sprint. I moved delivery to service-level ownership and put dependencies on the table before each sprint." />
+  <link rel="canonical" href="https://saeedsaedi.github.io/work/service-ownership.html" />
+  <meta property="og:title" content="From one sprint plan to service ownership — Saeed Saedi" />
+  <meta property="og:description" content="Delivery for 31 microservices ran on one shared sprint plan, so cross-team dependencies kept surfacing mid-sprint. I moved delivery to service-level ownership and put dependencies on the table before each sprint." />
+  <meta property="og:image" content="https://saeedsaedi.github.io/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://saeedsaedi.github.io/work/service-ownership.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">SS</span>Saeed Saedi</a>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+      <a href="../#work">Work</a>
+      <a href="../#path">Path</a>
+      <a href="../#experience">Experience</a>
+      <a href="../resume.html" target="_blank" rel="noopener">Résumé ↗</a>
+    </nav>
+    <a class="btn btn--ghost btn--sm" href="../#contact">Get in touch</a>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </div>
+</header>
+
+<main class="cs">
+  <article>
+    <div class="wrap">
+      <a class="cs__back" href="../#work">← All work</a>
+      <p class="eyebrow">Case study · Kifpool.me · Delivery</p>
+      <h1 class="cs__title">From one sprint plan to service ownership</h1>
+      <p class="lead cs__lead">Thirty-one microservices shared one sprint plan, and cross-team dependencies kept surfacing halfway through the sprint. I moved delivery to service-level ownership and mapped dependencies before each sprint started. Cross-team blockers fell by 30%, and releases became more predictable.</p>
+      <dl class="glance">
+        <div><dt>Role</dt><dd>Technical Product Manager</dd></div>
+        <div><dt>Team</dt><dd>20 engineers, 3 squads</dd></div>
+        <div><dt>Scope</dt><dd>31 microservices</dd></div>
+        <div><dt>Result</dt><dd>−30% cross-team blockers</dd></div>
+      </dl>
+    </div>
+
+    <figure class="wrap cs__figure">
+      <div class="frame">
+        <svg viewBox="0 0 560 340" role="img" aria-label="Before: one sprint plan tangled across services. After: three squads that own their services, with explicit dependencies.">
+  <defs><marker id="arw-own" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#818cf8"/></marker></defs>
+  <text x="8" y="20" class="dg-label">BEFORE</text>
+  <text x="8" y="40" class="dg-sub">One sprint plan, 31 services</text>
+  <g stroke="#34343c" stroke-width="1">
+    <line x1="130" y1="94" x2="130" y2="190"/><line x1="186.4" y1="112.3" x2="130" y2="190"/>
+    <line x1="221.3" y1="160.3" x2="130" y2="190"/><line x1="221.3" y1="219.7" x2="130" y2="190"/>
+    <line x1="186.4" y1="267.7" x2="130" y2="190"/><line x1="130" y1="286" x2="130" y2="190"/>
+    <line x1="73.6" y1="267.7" x2="130" y2="190"/><line x1="38.7" y1="219.7" x2="130" y2="190"/>
+    <line x1="38.7" y1="160.3" x2="130" y2="190"/><line x1="73.6" y1="112.3" x2="130" y2="190"/>
+  </g>
+  <g stroke="#55555f" stroke-width="1" stroke-dasharray="3 4">
+    <line x1="186.4" y1="112.3" x2="73.6" y2="267.7"/><line x1="221.3" y1="160.3" x2="38.7" y2="219.7"/>
+    <line x1="130" y1="94" x2="186.4" y2="267.7"/><line x1="73.6" y1="112.3" x2="221.3" y2="219.7"/>
+  </g>
+  <g fill="#17171b" stroke="#46464f">
+    <rect x="122" y="86" width="16" height="16" rx="3"/><rect x="178.4" y="104.3" width="16" height="16" rx="3"/>
+    <rect x="213.3" y="152.3" width="16" height="16" rx="3"/><rect x="213.3" y="211.7" width="16" height="16" rx="3"/>
+    <rect x="178.4" y="259.7" width="16" height="16" rx="3"/><rect x="122" y="278" width="16" height="16" rx="3"/>
+    <rect x="65.6" y="259.7" width="16" height="16" rx="3"/><rect x="30.7" y="211.7" width="16" height="16" rx="3"/>
+    <rect x="30.7" y="152.3" width="16" height="16" rx="3"/><rect x="65.6" y="104.3" width="16" height="16" rx="3"/>
+  </g>
+  <rect x="94" y="174" width="72" height="32" rx="8" fill="#16163a" stroke="#6366f1"/>
+  <text x="130" y="194" text-anchor="middle" class="dg-small" style="fill:#a5b4fc">SPRINT</text>
+  <g fill="#fbbf24"><circle cx="158.2" cy="151.2" r="4"/><circle cx="84.4" cy="204.9" r="4"/><circle cx="117.9" cy="144.5" r="4"/></g>
+  <circle cx="12" cy="325" r="4" fill="#fbbf24"/><text x="22" y="329" class="dg-sub">blocked dependency</text>
+  <line x1="280" y1="12" x2="280" y2="328" stroke="#26262c" stroke-dasharray="3 5"/>
+  <text x="304" y="20" class="dg-label">AFTER</text>
+  <text x="304" y="40" class="dg-sub">3 squads, clear owners</text>
+  <g fill="rgba(255,255,255,0.015)" stroke="#3a3a42" stroke-dasharray="4 4">
+    <rect x="304" y="78" width="104" height="104" rx="14"/><rect x="448" y="78" width="104" height="104" rx="14"/><rect x="376" y="214" width="104" height="104" rx="14"/>
+  </g>
+  <g fill="rgba(34,211,238,0.16)"><circle cx="320" cy="96" r="9"/><circle cx="464" cy="96" r="9"/><circle cx="392" cy="232" r="9"/></g>
+  <g fill="#22d3ee"><circle cx="320" cy="96" r="4.5"/><circle cx="464" cy="96" r="4.5"/><circle cx="392" cy="232" r="4.5"/></g>
+  <text x="332" y="100" class="dg-small">BACKEND</text><text x="476" y="100" class="dg-small">INFRA</text><text x="404" y="236" class="dg-small">BLOCKCHAIN</text>
+  <g fill="#17171b" stroke="#55555f">
+    <rect x="334" y="120" width="16" height="16" rx="3"/><rect x="362" y="120" width="16" height="16" rx="3"/><rect x="334" y="148" width="16" height="16" rx="3"/><rect x="362" y="148" width="16" height="16" rx="3"/>
+    <rect x="478" y="120" width="16" height="16" rx="3"/><rect x="506" y="120" width="16" height="16" rx="3"/><rect x="478" y="148" width="16" height="16" rx="3"/><rect x="506" y="148" width="16" height="16" rx="3"/>
+    <rect x="406" y="256" width="16" height="16" rx="3"/><rect x="434" y="256" width="16" height="16" rx="3"/><rect x="406" y="284" width="16" height="16" rx="3"/><rect x="434" y="284" width="16" height="16" rx="3"/>
+  </g>
+  <g stroke="#818cf8" stroke-width="1.5" fill="none" marker-end="url(#arw-own)">
+    <line x1="410" y1="130" x2="444" y2="130"/><path d="M356 184 V250 Q356 266 372 266"/><path d="M500 184 V250 Q500 266 484 266"/>
+  </g>
+  <line x1="304" y1="325" x2="322" y2="325" stroke="#818cf8" stroke-width="1.5"/><text x="328" y="329" class="dg-sub">explicit dependency</text>
+  <circle cx="462" cy="325" r="4" fill="#22d3ee"/><text x="472" y="329" class="dg-sub">owner</text>
+</svg>
+      </div>
+      <figcaption>Before: one plan across every service, with dependencies found mid-sprint. After: three squads that own their services, with dependencies agreed up front. Illustrative.</figcaption>
+    </figure>
+
+    <div class="wrap cs__body">
+      <nav class="toc" aria-label="On this page">
+        <b>On this page</b>
+        <a href="#situation">The situation</a>
+        <a href="#problem">The problem</a>
+        <a href="#did">What I did</a>
+        <a href="#results">Results</a>
+        <a href="#learned">What I learned</a>
+      </nav>
+      <div class="prose">
+        <h2 id="situation">The situation</h2>
+        <p>Kifpool.me is a cryptocurrency exchange with more than two million users. Behind it are 31 microservices, from the exchange engine and order management to pricing and blockchain integrations. Twenty engineers build them in three squads: backend, infrastructure and blockchain. We work in two-week sprints.</p>
+
+        <h2 id="problem">The problem</h2>
+        <p>Planning happened as one sprint for everyone. Each engineer planned their own piece, but nobody owned the picture across services. When a feature touched two or three services, the dependency usually showed up halfway through the sprint: one service changed a contract that another was already building against. Both slipped, and the sprint goal slipped with them.</p><p>In a system this size, that pattern was the biggest single reason sprint goals were missed.</p>
+
+        <h2 id="did">What I did</h2>
+        <ul class="did">
+          <li><strong>Every service has an owner.</strong> Each squad owns its services end to end, from planning to release, so someone is always accountable for a change and its effects.</li>
+          <li><strong>Dependencies are mapped before the sprint, not during it.</strong> Any feature that touches more than one service gets a dependency map at planning, and shared API contracts are agreed before parallel work starts.</li>
+          <li><strong>Slips show up early.</strong> A short check on day six of each sprint, plus a “cut first if tight” list, means we adjust while there is still time.</li>
+          <li><strong>Commitments match capacity.</strong> Velocity from past sprints sets how much we take on, so plans are realistic from the start.</li>
+        </ul>
+        <blockquote class="pull">“Dependency management means catching the collision on day zero, not day eight.”</blockquote>
+
+        <h2 id="results">Results</h2>
+        <div class="results">
+          <div><b>−30%</b><span>cross-team dependency blockers</span></div>
+          <div><b>95%+</b><span>on-time delivery across 31 services</span></div>
+          <div><b class="word">Earlier</b><span>conflicts now surface at planning instead of mid-sprint</span></div>
+        </div>
+
+        <h2 id="learned">What I learned</h2>
+        <p>Most delivery delays are coordination problems that look like engineering problems. Making ownership and dependencies explicit did more for our speed than any push to work faster.</p>
+      </div>
+    </div>
+
+    <nav class="wrap cs__next" aria-label="Next case study">
+      <small>Next case study</small>
+      <a href="delivery-visibility.html">Real-time delivery visibility for the <span class="nowrap">C-suite</span> →</a>
+    </nav>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Saeed Saedi</span>
+    <span>Hand-built — HTML and CSS, no frameworks · <a href="https://github.com/SaeedSaedi/saeedsaedi.github.io" target="_blank" rel="noopener">Source ↗</a></span>
+  </div>
+</footer>
+
+<script src="../script.js" defer></script>
+</body>
+</html>
