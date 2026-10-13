@@ -19,26 +19,14 @@
   <meta name="twitter:image"      content="https://avatars.githubusercontent.com/u/1686285?v=4" />
   <link rel="icon" href="https://avatars.githubusercontent.com/u/1686285?v=4" />
 
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet" />
+  <!-- Fonts: self-hosted Inter + JetBrains Mono (@font-face in style.css) -->
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
 
-  <!-- Tailwind CSS (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-        },
-      },
-    };
-  </script>
-
-  <!-- Custom styles -->
+  <!-- Custom styles, then compiled Tailwind utilities (generated — see tailwind.config.js).
+       Utilities load last so they win over custom classes of equal specificity. -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tailwind.css" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -866,6 +854,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
