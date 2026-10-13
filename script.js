@@ -62,6 +62,9 @@
   }
 
   /* ── 3. Active nav link on scroll ───────────────── */
+  /* A section is "current" while it crosses a thin band just above the middle
+     of the viewport — works for sections taller than the screen, too. The hero
+     (#top) has no nav link, so scrolling back up clears the highlight. */
   var sections = document.querySelectorAll('section[id]');
   var navLinks = document.querySelectorAll('nav a.nav-link');
 
@@ -78,7 +81,7 @@
           });
         }
       });
-    }, { threshold: 0.4 });
+    }, { rootMargin: '-45% 0px -50% 0px' });
 
     sections.forEach(function (section) { navObserver.observe(section); });
   }

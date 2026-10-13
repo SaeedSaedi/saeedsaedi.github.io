@@ -10,14 +10,23 @@
         content="Technical Product Manager who ships complex systems at scale — combining hands-on engineering fluency with operational rigor. Own roadmap and delivery for 31 microservices and a 20-engineer team powering a 2M-user exchange at 95%+ on-time delivery." />
   <meta property="og:title"       content="Saeed Saedi — Technical Product Manager" />
   <meta property="og:description" content="Engineering background. Product mindset. Shipping at scale. 31 microservices · 20 engineers · 2M+ users · 95%+ on-time delivery." />
-  <meta property="og:image"       content="https://avatars.githubusercontent.com/u/1686285?v=4" />
+  <meta property="og:image"       content="https://saeedsaedi.github.io/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height"content="630" />
+  <meta property="og:image:alt"   content="Saeed Saedi — Technical Product Manager" />
   <meta property="og:url"         content="https://saeedsaedi.github.io/" />
   <meta property="og:type"        content="website" />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="twitter:title"      content="Saeed Saedi — Technical Product Manager" />
   <meta name="twitter:description"content="Engineering background. Product mindset. Shipping at scale. 31 microservices · 20 engineers · 2M+ users · 95%+ on-time delivery." />
-  <meta name="twitter:image"      content="https://avatars.githubusercontent.com/u/1686285?v=4" />
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/1686285?v=4" />
+  <meta name="twitter:image"      content="https://saeedsaedi.github.io/assets/og-image.jpg" />
+  <meta name="twitter:image:alt"  content="Saeed Saedi — Technical Product Manager" />
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Mark JS as available before first paint, so .fade-in content is only
+       hidden when script.js is there to reveal it (see style.css). -->
+  <script>document.documentElement.classList.add('js');</script>
 
   <!-- Fonts: self-hosted Inter + JetBrains Mono (@font-face in style.css) -->
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -36,7 +45,7 @@
     "name": "Saeed Saedi",
     "jobTitle": "Technical Product Manager",
     "url": "https://saeedsaedi.github.io",
-    "image": "https://avatars.githubusercontent.com/u/1686285?v=4",
+    "image": "https://saeedsaedi.github.io/assets/saeed-saedi.webp",
     "email": "saeed.saedi.s@gmail.com",
     "sameAs": [
       "https://www.linkedin.com/in/saeedsaedi/",
@@ -71,7 +80,7 @@
   <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-zinc-950/80 border-b border-zinc-800/60">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-      <a href="#" class="font-semibold text-zinc-100 tracking-tight hover:text-white transition-colors flex items-center gap-2">
+      <a href="#top" class="font-semibold text-zinc-100 tracking-tight hover:text-white transition-colors flex items-center gap-2">
         <span class="mono text-indigo-400">~/</span>saeed.saedi
       </a>
 
@@ -116,11 +125,12 @@
     </div>
   </nav>
 
+  <main>
 
   <!-- ══════════════════════════════════════════════
        HERO
        ══════════════════════════════════════════════ -->
-  <section class="hero-grid relative min-h-screen flex flex-col justify-center overflow-hidden pt-24 pb-24 px-6">
+  <section id="top" class="hero-grid relative min-h-screen flex flex-col justify-center overflow-hidden pt-24 pb-16 md:pb-24 px-6">
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="hero-glow hero-glow--cyan" aria-hidden="true"></div>
 
@@ -144,7 +154,7 @@
         <p class="text-base md:text-lg text-zinc-400 mb-5 max-w-xl leading-relaxed">
           I turn ambiguous business goals into precise technical execution.
         </p>
-        <p class="text-base text-zinc-500 mb-10 max-w-xl leading-relaxed">
+        <p class="text-base text-dim mb-10 max-w-xl leading-relaxed">
           Leading <strong class="text-zinc-300 font-medium">31 microservices</strong>, a team of
           <strong class="text-zinc-300 font-medium">20 engineers</strong>, and a platform serving
           <strong class="text-zinc-300 font-medium">2M+ users</strong> at Kifpool.me.
@@ -196,7 +206,7 @@
     </div>
 
     <!-- Scroll hint -->
-    <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-indicator hidden md:block" aria-hidden="true">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
       </svg>
@@ -207,7 +217,7 @@
   <!-- ══════════════════════════════════════════════
        ABOUT
        ══════════════════════════════════════════════ -->
-  <section id="about" class="py-24 px-6">
+  <section id="about" class="py-16 md:py-24 px-6">
     <div class="max-w-6xl mx-auto">
 
       <!-- Section header -->
@@ -227,7 +237,7 @@
 
         <!-- Profile photo -->
         <div class="fade-in flex-shrink-0">
-          <img src="https://avatars.githubusercontent.com/u/1686285?v=4"
+          <img src="assets/saeed-saedi.webp"
                alt="Saeed Saedi"
                width="180" height="180"
                class="profile-photo"
@@ -236,7 +246,7 @@
         </div>
 
         <!-- Bio text -->
-        <div class="fade-in">
+        <div class="fade-in max-w-2xl">
           <p class="text-zinc-300 text-lg leading-relaxed mb-4">
             13+ years spanning engineering, operations, and product leadership. I've built
             full-stack platforms, scaled a factory floor from 3K to 25,000 units/month, and
@@ -257,22 +267,22 @@
         <div class="card card--compact fade-in">
           <div class="metric-num">+40%</div>
           <div class="text-sm font-medium text-zinc-200 mb-0.5">Efficiency gain</div>
-          <div class="text-xs text-zinc-500 mono">Manufacturing operations</div>
+          <div class="text-xs text-dim mono">Manufacturing operations</div>
         </div>
         <div class="card card--compact fade-in">
           <div class="metric-num">−26%</div>
           <div class="text-sm font-medium text-zinc-200 mb-0.5">Waste reduced</div>
-          <div class="text-xs text-zinc-500 mono">Cross-shift process redesign</div>
+          <div class="text-xs text-dim mono">Cross-shift process redesign</div>
         </div>
         <div class="card card--compact fade-in">
           <div class="metric-num">5K</div>
           <div class="text-sm font-medium text-zinc-200 mb-0.5">Daily transactions</div>
-          <div class="text-xs text-zinc-500 mono">Crypto exchange platform</div>
+          <div class="text-xs text-dim mono">Crypto exchange platform</div>
         </div>
         <div class="card card--compact fade-in">
           <div class="metric-num">2×</div>
           <div class="text-sm font-medium text-zinc-200 mb-0.5">Promoted in 6 months</div>
-          <div class="text-xs text-zinc-500 mono">Dev → Scrum Master → TPM</div>
+          <div class="text-xs text-dim mono">Dev → Scrum Master → TPM</div>
         </div>
       </div>
 
@@ -283,7 +293,7 @@
   <!-- ══════════════════════════════════════════════
        HOW I WORK
        ══════════════════════════════════════════════ -->
-  <section class="py-20 px-6 border-t border-zinc-800/50">
+  <section class="py-16 md:py-20 px-6 border-t border-zinc-800/50">
     <div class="max-w-6xl mx-auto">
 
       <div class="fade-in mb-12">
@@ -346,7 +356,7 @@
   <!-- ══════════════════════════════════════════════
        EXPERIENCE
        ══════════════════════════════════════════════ -->
-  <section id="experience" class="py-24 px-6 border-y border-zinc-800/50 bg-zinc-900/20">
+  <section id="experience" class="py-16 md:py-24 px-6 border-y border-zinc-800/50 bg-zinc-900/20">
     <div class="max-w-6xl mx-auto">
 
       <div class="fade-in mb-16">
@@ -386,8 +396,8 @@
                   <h3 class="text-xl font-bold text-white">Technical Product Manager</h3>
                   <div class="flex flex-wrap items-center gap-2 mt-1">
                     <span class="text-indigo-400 font-semibold">Kifpool.me</span>
-                    <span class="text-zinc-700">·</span>
-                    <span class="text-zinc-500 text-sm">Cryptocurrency Exchange</span>
+                    <span class="text-dim">·</span>
+                    <span class="text-dim text-sm">Cryptocurrency Exchange</span>
                   </div>
                   <!-- Promotion track -->
                   <div class="promo-track">
@@ -398,7 +408,7 @@
                     <span class="promo-step promo-step--active">Technical PM</span>
                   </div>
                 </div>
-                <div class="flex flex-col items-end gap-1.5 flex-shrink-0">
+                <div class="flex flex-col items-start sm:items-end gap-1.5 flex-shrink-0">
                   <span class="badge-current">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span>
                     Current Role
@@ -408,7 +418,7 @@
               </div>
 
               <!-- Bullets -->
-              <ul class="space-y-3 mt-6 mb-6">
+              <ul class="space-y-3 mt-6 mb-6 max-w-prose">
                 <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
                   <span class="text-indigo-400 flex-shrink-0 mt-0.5">→</span>
                   <span>Own end-to-end product roadmap and delivery across
@@ -476,37 +486,37 @@
                   <h3 class="text-xl font-bold text-white">Production Manager</h3>
                   <div class="flex flex-wrap items-center gap-2 mt-1">
                     <span class="text-zinc-200 font-semibold">Toosalem Industrial</span>
-                    <span class="text-zinc-700">·</span>
-                    <span class="text-zinc-500 text-sm">Automotive Manufacturing</span>
+                    <span class="text-dim">·</span>
+                    <span class="text-dim text-sm">Automotive Manufacturing</span>
                   </div>
                 </div>
-                <div class="text-right flex-shrink-0">
+                <div class="sm:text-right flex-shrink-0">
                   <div class="meta-mono">Feb 2019 – Sep 2024</div>
-                  <div class="meta-mono text-zinc-600 mt-0.5">5+ years</div>
+                  <div class="meta-mono text-dim mt-0.5">5+ years</div>
                 </div>
               </div>
 
-              <ul class="space-y-3 mb-6">
+              <ul class="space-y-3 mb-6 max-w-prose">
                 <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-zinc-500 flex-shrink-0 mt-0.5">→</span>
+                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
                   <span>Scaled production output <strong class="text-zinc-200 font-medium">8×</strong>
                     (3,000 → 25,000 units/month) by designing a new production line, restructuring
                     shift operations, and optimizing end-to-end throughput</span>
                 </li>
                 <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-zinc-500 flex-shrink-0 mt-0.5">→</span>
+                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
                   <span>Drove <strong class="text-zinc-200 font-medium">40% efficiency gain</strong>
                     across 3 shifts and ~80 personnel through process reengineering and cross-department
                     coordination (Engineering, Foundry, HR, Supply Chain)</span>
                 </li>
                 <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-zinc-500 flex-shrink-0 mt-0.5">→</span>
+                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
                   <span>Reduced material waste <strong class="text-zinc-200 font-medium">26%</strong>
                     and unplanned downtime <strong class="text-zinc-200 font-medium">18%</strong>
                     via data-driven root-cause analysis and preventive maintenance programs</span>
                 </li>
                 <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-zinc-500 flex-shrink-0 mt-0.5">→</span>
+                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
                   <span>Built and deployed <strong class="text-zinc-200 font-medium">2 internal
                     software systems</strong> (Packaging Management, Maintenance Management) serving
                     21 users, replacing manual tracking and improving KPI reporting accuracy</span>
@@ -539,16 +549,16 @@
                   <h3 class="text-xl font-bold text-white">Co-Founder &amp; Developer</h3>
                   <div class="flex flex-wrap items-center gap-2 mt-1">
                     <span class="text-zinc-200 font-semibold">GoldenTech</span>
-                    <span class="text-zinc-700">·</span>
-                    <span class="text-zinc-500 text-sm">Chikhoobe Platform · Startup</span>
+                    <span class="text-dim">·</span>
+                    <span class="text-dim text-sm">Chikhoobe Platform · Startup</span>
                   </div>
                 </div>
                 <div class="meta-mono flex-shrink-0">2011</div>
               </div>
 
-              <ul class="space-y-3 mb-6">
+              <ul class="space-y-3 mb-6 max-w-prose">
                 <li class="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-                  <span class="text-zinc-600 flex-shrink-0 mt-0.5">→</span>
+                  <span class="text-dim flex-shrink-0 mt-0.5">→</span>
                   <span>Co-founded a data collection startup; designed and built the full-stack
                     platform, led product ideation through early-stage validation and product-market
                     fit discovery</span>
@@ -573,7 +583,7 @@
   <!-- ══════════════════════════════════════════════
        PROJECTS
        ══════════════════════════════════════════════ -->
-  <section id="projects" class="py-24 px-6">
+  <section id="projects" class="py-16 md:py-24 px-6">
     <div class="max-w-6xl mx-auto">
 
       <div class="fade-in mb-14">
@@ -591,7 +601,7 @@
            class="card fade-in group block">
           <div class="flex items-start justify-between gap-3 mb-3">
             <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">sms-sender</h3>
-            <span class="meta-mono text-xs text-zinc-500">Python</span>
+            <span class="meta-mono text-xs text-dim">Python</span>
           </div>
           <p class="text-sm text-zinc-400 leading-relaxed mb-4">Fault-tolerant bulk SMS CLI for Kavenegar. A SQLite state machine keeps every run idempotent and crash-resumable, and separates permanent failures from retriable ones.</p>
           <div class="flex flex-wrap gap-2">
@@ -599,14 +609,14 @@
             <span class="tag">Fault tolerance</span>
             <span class="tag">Rate limiting</span>
           </div>
-          <div class="mt-5 meta-mono text-xs text-zinc-600 group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
+          <div class="mt-5 meta-mono text-xs text-dim group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
         </a>
 
         <a href="https://github.com/SaeedSaedi/dotfiles" target="_blank" rel="noopener"
            class="card fade-in group block">
           <div class="flex items-start justify-between gap-3 mb-3">
             <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">dotfiles</h3>
-            <span class="meta-mono text-xs text-zinc-500">Shell</span>
+            <span class="meta-mono text-xs text-dim">Shell</span>
           </div>
           <p class="text-sm text-zinc-400 leading-relaxed mb-4">Cross-platform development environment. One script provisions Neovim, tmux, Zsh and VS Code on macOS and Ubuntu, with smoke tests and local overrides.</p>
           <div class="flex flex-wrap gap-2">
@@ -614,29 +624,29 @@
             <span class="tag">Reproducibility</span>
             <span class="tag">macOS / Linux</span>
           </div>
-          <div class="mt-5 meta-mono text-xs text-zinc-600 group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
+          <div class="mt-5 meta-mono text-xs text-dim group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
         </a>
 
         <a href="https://github.com/SaeedSaedi/saeedsaedi.github.io" target="_blank" rel="noopener"
            class="card fade-in group block">
           <div class="flex items-start justify-between gap-3 mb-3">
             <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">saeedsaedi.github.io</h3>
-            <span class="meta-mono text-xs text-zinc-500">HTML</span>
+            <span class="meta-mono text-xs text-dim">HTML</span>
           </div>
-          <p class="text-sm text-zinc-400 leading-relaxed mb-4">This site. Single page, no build step and no framework &mdash; Tailwind via CDN and vanilla JavaScript, deployed straight from main.</p>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-4">This site. Single page, no framework &mdash; precompiled Tailwind, vanilla JavaScript and self-hosted fonts, with zero third-party requests. Deployed straight from main.</p>
           <div class="flex flex-wrap gap-2">
             <span class="tag">Tailwind</span>
             <span class="tag">Vanilla JS</span>
             <span class="tag">GitHub Pages</span>
           </div>
-          <div class="mt-5 meta-mono text-xs text-zinc-600 group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
+          <div class="mt-5 meta-mono text-xs text-dim group-hover:text-indigo-400 transition-colors">View on GitHub &rarr;</div>
         </a>
 
       </div>
 
-      <p class="fade-in mt-10 text-sm text-zinc-500">Everything else lives at
+      <p class="fade-in mt-10 text-sm text-dim">Everything else lives at
         <a href="https://github.com/SaeedSaedi" target="_blank" rel="noopener"
-           class="text-indigo-400 hover:text-indigo-300 transition-colors">github.com/SaeedSaedi</a>.</p>
+           class="text-indigo-400 hover:text-indigo-300 underline decoration-indigo-400/40 underline-offset-4 hover:decoration-indigo-300 transition-colors">github.com/SaeedSaedi</a>.</p>
 
     </div>
   </section>
@@ -644,7 +654,7 @@
   <!-- ══════════════════════════════════════════════
        SKILLS
        ══════════════════════════════════════════════ -->
-  <section id="skills" class="py-24 px-6">
+  <section id="skills" class="py-16 md:py-24 px-6">
     <div class="max-w-6xl mx-auto">
 
       <div class="fade-in mb-14">
@@ -737,7 +747,7 @@
   <!-- ══════════════════════════════════════════════
        EDUCATION
        ══════════════════════════════════════════════ -->
-  <section class="py-16 px-6 border-t border-zinc-800/50">
+  <section class="py-12 md:py-16 px-6 border-t border-zinc-800/50">
     <div class="max-w-6xl mx-auto">
       <div class="fade-in flex flex-wrap items-center justify-between gap-8">
         <div class="flex flex-col gap-6 flex-1">
@@ -749,8 +759,8 @@
             <h3 class="text-2xl font-bold text-white">
               Bachelor of Science, Industrial Management
             </h3>
-            <p class="text-zinc-500 mt-1.5">
-              Imam Reza International University &nbsp;<span class="mono text-zinc-600">·</span>&nbsp;
+            <p class="text-dim mt-1.5">
+              Imam Reza International University &nbsp;<span class="mono text-dim">·</span>&nbsp;
               <span class="meta-mono">2011 – 2015</span>
             </p>
           </div>
@@ -759,17 +769,17 @@
             <h3 class="text-lg font-semibold text-white">
               Product Management Program
             </h3>
-            <p class="text-zinc-500 mt-1">
+            <p class="text-dim mt-1">
               <a href="https://bozhan.school/courses/productmanagement/"
                  target="_blank" rel="noopener noreferrer"
-                 class="text-indigo-400 hover:text-indigo-300 transition-colors">Bozhan School</a>
+                 class="text-indigo-400 hover:text-indigo-300 underline decoration-indigo-400/40 underline-offset-4 hover:decoration-indigo-300 transition-colors">Bozhan School</a>
               &nbsp;·&nbsp; Product Strategy, User Research, Product Development, Marketing &amp; Analytics
             </p>
           </div>
         </div>
         <div class="border border-zinc-800 rounded-xl px-6 py-4 text-center">
           <div class="text-base font-semibold text-zinc-200">English</div>
-          <div class="text-sm text-zinc-500 mt-0.5">Upper-Intermediate</div>
+          <div class="text-sm text-dim mt-0.5">Upper-Intermediate</div>
         </div>
       </div>
     </div>
@@ -779,11 +789,11 @@
   <!-- ══════════════════════════════════════════════
        CONTACT
        ══════════════════════════════════════════════ -->
-  <section id="contact" class="py-28 px-6 border-t border-zinc-800/50 bg-zinc-900/20">
+  <section id="contact" class="py-20 md:py-28 px-6 border-t border-zinc-800/50 bg-zinc-900/20">
     <div class="max-w-6xl mx-auto">
       <div class="fade-in max-w-2xl mx-auto text-center">
 
-        <div class="section-label">06 — Contact</div>
+        <div class="section-index mb-4">07 — Contact</div>
         <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 leading-[1.05]">
           Let's work together
         </h2>
@@ -838,19 +848,20 @@
           </a>
         </div>
 
-        <p class="text-zinc-600 text-sm">📍 Mashhad, Iran &nbsp;·&nbsp; Open to relocation and remote opportunities worldwide</p>
+        <p class="text-dim text-sm">📍 Mashhad, Iran &nbsp;·&nbsp; Open to relocation and remote opportunities worldwide</p>
       </div>
     </div>
   </section>
 
+  </main>
 
   <!-- ══════════════════════════════════════════════
        FOOTER
        ══════════════════════════════════════════════ -->
   <footer class="py-8 px-6 border-t border-zinc-800/40">
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
-      <p class="text-zinc-600 text-sm">© <span id="year">2026</span> Saeed Saedi</p>
-      <p class="mono text-zinc-700 text-xs">HTML &amp; Tailwind · GitHub Pages</p>
+      <p class="text-dim text-sm">© <span id="year">2026</span> Saeed Saedi</p>
+      <p class="mono text-dim text-xs">HTML &amp; Tailwind · GitHub Pages</p>
     </div>
   </footer>
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+  Source for favicon.ico (16/32/48) and apple-touch-icon.png (180, full-bleed).
+  Not published: Jekyll skips folders that start with "_".
+  Regenerate (from the repo root, with `python3 -m http.server 8080` running):
+    CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    "$CHROME" --headless=new --hide-scrollbars --default-background-color=00000000 \
+      --window-size=512,512 --screenshot=/tmp/icon.png http://localhost:8080/_design/icon.html
+    "$CHROME" --headless=new --hide-scrollbars \
+      --window-size=512,512 --screenshot=/tmp/icon-full.png "http://localhost:8080/_design/icon.html?full"
+    python3 -c "from PIL import Image; Image.open('/tmp/icon.png').save('favicon.ico', sizes=[(16,16),(32,32),(48,48)]); \
+      Image.open('/tmp/icon-full.png').convert('RGB').resize((180,180), Image.LANCZOS).save('apple-touch-icon.png')"
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Icon — SS monogram</title>
+<style>
+  @font-face {
+    font-family: 'Inter'; font-style: normal; font-weight: 100 900;
+    src: url('../assets/fonts/inter-latin.woff2') format('woff2');
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 512px; height: 512px; overflow: hidden; background: transparent; }
+  .tile {
+    width: 512px; height: 512px;
+    border-radius: 112px;
+    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 45%, #0891b2 100%);
+    display: grid; place-items: center;
+  }
+  .full .tile { border-radius: 0; }   /* iOS rounds apple-touch-icon itself */
+  .tile span {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 272px; font-weight: 800; letter-spacing: -0.065em;
+    color: #fff; line-height: 1;
+    transform: translate(-6px, -8px);   /* optical centring of the pair */
+  }
+</style>
+</head>
+<body>
+  <div class="tile"><span>SS</span></div>
+  <script>if (location.search.indexOf('full') !== -1) document.body.className = 'full';</script>
+</body>
+</html>
