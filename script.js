@@ -61,6 +61,24 @@
     sections.forEach(function (section) { observer.observe(section); });
   }
 
+  /* Sections use content-visibility: auto, so sections next to a #hash target
+     render (and change height) in the first frames after the jump. Re-align a
+     few times while that settles; stop as soon as the visitor scrolls. */
+  if (location.hash.length > 1) {
+    var hashTarget = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (hashTarget) {
+      var userMoved = false;
+      ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (type) {
+        window.addEventListener(type, function () { userMoved = true; }, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () {
+        [0, 150, 400].forEach(function (delay) {
+          setTimeout(function () { if (!userMoved) hashTarget.scrollIntoView(); }, delay);
+        });
+      });
+    }
+  }
+
   /* ── 3. Footer year ─────────────────────────────── */
   var yearEl = document.getElementById('year');
   if (yearEl) { yearEl.textContent = String(new Date().getFullYear()); }
