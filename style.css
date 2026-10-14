@@ -141,7 +141,7 @@ strong { color: var(--text); font-weight: 600; }
 .stat__label { margin-top: 10px; max-width: 22ch; font-size: 14.5px; line-height: 1.5; color: var(--text-3); }
 
 /* ─── Sections ─────────────────────────────────────── */
-.section { padding-top: 152px; }
+.section { padding-top: 144px; padding-bottom: 8px; }   /* the 8px keeps focus rings inside the paint containment below */
 /* Skip style, layout and paint for sections until they come near the viewport.
    The diagrams make the page heavy; this keeps the first render to the hero.
    'auto' remembers each section's real size once it has been rendered. */
@@ -366,7 +366,7 @@ strong { color: var(--text); font-weight: 600; }
   .hero__ctas .btn { flex: 1 1 auto; }
   .stat__num { font-size: 36px; }
 
-  .section { padding-top: 104px; }
+  .section { padding-top: 96px; }
   .case__body, .case--featured .case__body { padding: 24px 24px 28px; }
   .case__title, .case--featured .case__title { font-size: 24px; }
   .serif .case__title, .serif .case--featured .case__title { font-size: 30px; }
